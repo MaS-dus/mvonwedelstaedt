@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Danke fürs Ausmalen — M. von Wedelstaedt</title>
+<meta name="description" content="Danke, dass du eines unserer Malbücher ausgemalt hast. Hinterlasse gerne eine kurze Rezension auf Amazon.">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap');
+
+  :root {
+    --bg: #FAF6EE;
+    --surface: #FFFFFF;
+    --surface-2: #EFE7D6;
+    --ink: #22333B;
+    --ink-soft: #5B6B72;
+    --gold: #A97C3F;
+    --gold-bright: #C9A66B;
+    --rule: rgba(34, 51, 59, 0.16);
+    --shadow: 0 18px 40px -22px rgba(34, 51, 59, 0.35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #12191D; --surface: #1C262B; --surface-2: #202B31;
+      --ink: #EDE6D6; --ink-soft: #A9B7BC; --gold: #D8B67E; --gold-bright: #D8B67E;
+      --rule: rgba(237, 230, 214, 0.14); --shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.6);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #12191D; --surface: #1C262B; --surface-2: #202B31;
+    --ink: #EDE6D6; --ink-soft: #A9B7BC; --gold: #D8B67E; --gold-bright: #D8B67E;
+    --rule: rgba(237, 230, 214, 0.14); --shadow: 0 18px 40px -22px rgba(0, 0, 0, 0.6);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--gold); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-weight: 600;
+    text-wrap: balance;
+    margin: 0;
+  }
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 0 0 18px;
+  }
+  .wrap { max-width: 620px; margin: 0 auto; padding: 72px 24px 96px; text-align: center; }
+  header.top { text-align: center; padding: 28px 24px 0; }
+  header.top a { font-family: "Cormorant Garamond", serif; font-size: 1.1rem; color: var(--ink-soft); }
+
+  h1 { font-size: clamp(2rem, 5vw, 2.75rem); line-height: 1.2; margin: 1rem 0 0.75rem; }
+  .sub { font-size: 1.0625rem; color: var(--ink-soft); line-height: 1.6; margin: 0 0 2.5rem; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 32px;
+    box-shadow: var(--shadow);
+    margin-bottom: 28px;
+    text-align: left;
+  }
+  .card .label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+  .card p { font-size: 0.9375rem; color: var(--ink-soft); line-height: 1.6; margin: 0 0 20px; }
+  .card.pending p { margin-bottom: 0; }
+
+  .review-buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+  .review-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--ink);
+    color: var(--bg);
+    font-family: "Source Serif 4", serif;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: opacity 150ms, transform 100ms;
+  }
+  .review-btn:hover { opacity: 0.85; transform: translateY(-1px); text-decoration: none; }
+
+  .nl-card { background: var(--surface-2); border-radius: 18px; padding: 28px 32px; text-align: left; }
+  .nl-hint { font-size: 0.9375rem; font-weight: 600; color: var(--ink); margin: 0 0 20px; }
+  .field { margin-bottom: 16px; }
+  .field label { display: block; font-size: 0.875rem; font-weight: 600; color: var(--ink-soft); margin-bottom: 8px; }
+  .field input {
+    width: 100%; padding: 14px 16px; border: 1.5px solid var(--rule); border-radius: 10px;
+    font-size: 1rem; font-family: "Source Serif 4", serif; color: var(--ink); background: var(--surface);
+    box-sizing: border-box;
+  }
+  .field input:focus { outline: none; border-color: var(--gold); }
+  .btn {
+    width: 100%; padding: 14px; background: var(--ink); color: var(--bg);
+    font-size: 0.9375rem; font-weight: 700; font-family: "Source Serif 4", serif;
+    border: none; border-radius: 10px; cursor: pointer; transition: opacity 150ms;
+  }
+  .btn:hover { opacity: 0.88; }
+  .legal { font-size: 0.8125rem; color: var(--ink-soft); text-align: center; margin: 12px 0 0; }
+  .nl-message { margin-top: 16px; padding: 12px 16px; border-radius: 10px; font-size: 0.9rem; text-align: center; }
+  .nl-message.success { background: rgba(169,124,63,0.12); color: var(--gold); border: 1px solid rgba(169,124,63,0.3); }
+  .nl-message.error { background: rgba(220,80,80,0.1); color: #c84444; border: 1px solid rgba(220,80,80,0.3); }
+</style>
+</head>
+<body>
+
+<header class="top"><a href="/">M. von Wedelstaedt</a></header>
+
+<div class="wrap">
+  <p class="eyebrow">Malbuch-Reihe</p>
+  <h1 id="headline">Danke fürs Ausmalen!</h1>
+  <p class="sub" id="sub">Wir hoffen, das Buch hat Freude gemacht.</p>
+
+  <div class="card" id="review-card" hidden>
+    <div class="label" id="review-label">Magst du uns einen Gefallen tun?</div>
+    <p id="review-text">Eine kurze, ehrliche Rezension auf Amazon hilft uns riesig — sie dauert eine Minute und zeigt anderen Eltern, ob das Buch zu ihnen passt.</p>
+    <div class="review-buttons" id="review-buttons"></div>
+  </div>
+
+  <div class="card pending" id="pending-card" hidden>
+    <div class="label" id="pending-label">Rezension bald möglich</div>
+    <p id="pending-text">Dieses Buch ist gerade frisch bei Amazon eingereicht und noch nicht sichtbar. Schau in ein paar Tagen nochmal auf dieser Seite vorbei — der Link hier aktiviert sich automatisch, sobald das Buch live ist.</p>
+  </div>
+
+  <div class="nl-card">
+    <p class="nl-hint" id="nl-hint">Willst du erfahren, wenn neue Bücher der Reihe erscheinen?</p>
+    <form id="nl-form">
+      <div class="field">
+        <label for="nl-email" id="nl-label">E-Mail-Adresse</label>
+        <input id="nl-email" type="email" name="email" placeholder="deine@email.de" required autocomplete="email">
+      </div>
+      <input type="text" name="website" value="" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+      <button type="submit" class="btn" id="nl-btn">Anmelden</button>
+      <p class="legal" id="nl-legal">DSGVO-konform · Jederzeit abbestellbar</p>
+    </form>
+    <p id="nl-message" class="nl-message" hidden></p>
+  </div>
+</div>
+
+<script>
+  const WEBHOOK_URL = 'https://n8n.srv1082810.hstgr.cloud/webhook/klaviyo-subscribe';
+
+  const BUECHER = {
+    "01-tierbabys": { "de": { "titel": "Süße Tierbabys", "asin": "B0HFN75FX3" }, "en": { "titel": "Cute Baby Animals", "asin": "B0HFN5LZQD" } },
+    "02-tierfamilien": { "de": { "titel": "Tierfamilien", "asin": "B0HFN67D3V" }, "en": { "titel": "Animal Families", "asin": "B0HFP529X1" } },
+    "03-bauernhof": { "de": { "titel": "Mein Bauernhof-Malbuch", "asin": "B0HJCT162M" }, "en": { "titel": "My Farm Coloring Book", "asin": null } },
+    "04-safari": { "de": { "titel": "Safari und Dschungel", "asin": "B0HFN59WMB" }, "en": { "titel": "Safari and Jungle", "asin": "B0HFNQDSXM" } },
+    "05-unterwasser": { "de": { "titel": "Unterwasserwelt", "asin": "B0HFN5VKP6" }, "en": { "titel": "Under the Sea", "asin": "B0HFP6XQ5S" } },
+    "06-einhoerner": { "de": { "titel": "Einhörner und Zauberwesen", "asin": "B0HFNN7NYB" }, "en": { "titel": "Unicorns and Magical Creatures", "asin": "B0HFQR8YJB" } },
+    "07-dinosaurier": { "de": { "titel": "Dinosaurier", "asin": "B0HGBC76T5" }, "en": { "titel": "Dinosaurs", "asin": "B0HGBRFQDW" } },
+    "08-fahrzeuge": { "de": { "titel": "Fahrzeuge", "asin": "B0HGB662ZX" }, "en": { "titel": "Things That Go", "asin": "B0HJ64R68N" } },
+    "09-haustiere": { "de": { "titel": "Meine Haustiere", "asin": "B0HJFBV2QY" }, "en": { "titel": "My Pets", "asin": "B0HJFQTMZN" } },
+    "10-weihnachten": { "de": { "titel": "Weihnachten mit Tieren", "asin": "B0HGQXJVKR" }, "en": { "titel": "Christmas with Animals", "asin": "B0HGR64QBF" } },
+    "21-halloween": { "de": { "titel": "Halloweenspaß", "asin": null }, "en": { "titel": "Happy Halloween", "asin": "B0HH9WT713" } },
+    "22-thanksgiving": { "de": { "titel": "Erntedank mit Tieren", "asin": null }, "en": { "titel": "Happy Thanksgiving", "asin": "B0HGRZNQ94" } },
+    "23-nikolaus": { "de": { "titel": "Nikolaus kommt", "asin": "B0HJFJ85F9" }, "en": { "titel": "Here Comes St. Nicholas", "asin": "B0HJFJPFLW" } },
+    "25-silvester": { "de": { "titel": "Silvester Feuerwerk", "asin": null }, "en": { "titel": "New Year's Eve Sparkle", "asin": null } },
+    "05-unterwasser-deluxe": { "de": { "titel": "Unterwasserwelt Deluxe", "asin": null }, "en": { "titel": "Under the Sea Deluxe", "asin": null } }
+  };
+
+  const TLD_FUER_SPRACHE = { de: ['de'], en: ['com', 'ca', 'com.au', 'co.uk'] };
+  const SHOP_LABEL = { de: 'Amazon.de', com: 'Amazon.com (USA)', ca: 'Amazon.ca (Kanada)',
+                       'com.au': 'Amazon.com.au (Australien)', 'co.uk': 'Amazon.co.uk (UK)' };
+
+  const params = new URLSearchParams(window.location.search);
+  const buchId = params.get('buch');
+  const sprache = params.get('lang') === 'en' ? 'en' : 'de';
+  const eintrag = buchId && BUECHER[buchId] ? BUECHER[buchId][sprache] : null;
+
+  const headline = document.getElementById('headline');
+  const sub = document.getElementById('sub');
+
+  if (sprache === 'en') {
+    document.documentElement.lang = 'en';
+    headline.textContent = 'Thanks for coloring!';
+    sub.textContent = 'We hope the book brought some joy.';
+    document.getElementById('nl-hint').textContent = 'Want to hear about new books in the series?';
+    document.getElementById('nl-btn').textContent = 'Sign up';
+    document.getElementById('nl-label').textContent = 'Email address';
+    document.getElementById('nl-legal').textContent = 'Unsubscribe anytime';
+    document.getElementById('review-label').textContent = 'Can you do us a favor?';
+    document.getElementById('review-text').textContent =
+      "A short, honest review on Amazon helps us a lot — it takes a minute and shows other parents whether the book is right for them.";
+    document.getElementById('pending-label').textContent = 'Review coming soon';
+    document.getElementById('pending-text').textContent =
+      "This book was just submitted to Amazon and isn't visible yet. Check back on this page in a few days — the link here will activate automatically once the book is live.";
+  }
+
+  if (eintrag) {
+    headline.textContent = sprache === 'en'
+      ? `Thanks for coloring "${eintrag.titel}"!`
+      : `Danke, dass du "${eintrag.titel}" ausgemalt hast!`;
+  }
+
+  const card = document.getElementById('review-card');
+  const pending = document.getElementById('pending-card');
+
+  if (eintrag && eintrag.asin) {
+    const buttons = document.getElementById('review-buttons');
+    for (const tld of TLD_FUER_SPRACHE[sprache]) {
+      const a = document.createElement('a');
+      a.href = `https://www.amazon.${tld}/review/create-review?asin=${eintrag.asin}`;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.className = 'review-btn';
+      a.textContent = sprache === 'en' ? `Review on ${SHOP_LABEL[tld]}` : 'Rezension abgeben';
+      buttons.appendChild(a);
+    }
+    card.hidden = false;
+  } else if (eintrag) {
+    pending.hidden = false;
+  }
+
+  const form = document.getElementById('nl-form');
+  const msg = document.getElementById('nl-message');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    if (data.get('website')) return;
+    const payload = { email: data.get('email'), source: `Malbuch – ${buchId || 'unbekannt'}-${sprache}` };
+    const btn = document.getElementById('nl-btn');
+    const orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = sprache === 'en' ? 'Sending…' : 'Sende...';
+    msg.hidden = true;
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('Fehler');
+      msg.textContent = sprache === 'en'
+        ? 'Done! Check your inbox to confirm.'
+        : 'Geschafft! Schau in dein Postfach und bestätige deine Anmeldung.';
+      msg.className = 'nl-message success';
+      msg.hidden = false;
+      form.reset();
+    } catch (err) {
+      msg.textContent = sprache === 'en'
+        ? 'Something went wrong. Please try again later.'
+        : 'Da ist etwas schiefgelaufen. Bitte später nochmal versuchen.';
+      msg.className = 'nl-message error';
+      msg.hidden = false;
+      btn.textContent = orig;
+      btn.disabled = false;
+    }
+  });
+</script>
+</body>
+</html>
