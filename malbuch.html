@@ -164,7 +164,7 @@
 </footer>
 
 <script>
-  const WEBHOOK_URL = 'https://n8n.srv1082810.hstgr.cloud/webhook/klaviyo-subscribe';
+  const WEBHOOK_URL = 'https://n8n.srv1082810.hstgr.cloud/webhook/kinderbuecher-bonus-subscribe';
 
   const BUECHER = {
     "01-tierbabys": { "de": { "titel": "Süße Tierbabys", "asin": "B0HFN75FX3" }, "en": { "titel": "Cute Baby Animals", "asin": "B0HFN5LZQD" } },
@@ -243,7 +243,13 @@
     e.preventDefault();
     const data = new FormData(form);
     if (data.get('website')) return;
-    const payload = { email: data.get('email'), source: `Malbuch – ${buchId || 'unbekannt'}-${sprache}` };
+    const payload = {
+      email: data.get('email'),
+      buchId: buchId || 'unbekannt',
+      sprache: sprache,
+      buchTitel: eintrag ? eintrag.titel : '',
+      source: `Malbuch – ${buchId || 'unbekannt'}-${sprache}`,
+    };
     const btn = document.getElementById('nl-btn');
     const orig = btn.textContent;
     btn.disabled = true;
