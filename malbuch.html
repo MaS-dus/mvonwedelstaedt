@@ -144,16 +144,22 @@
     <p id="pending-text">Dieses Buch ist gerade frisch bei Amazon eingereicht und noch nicht sichtbar. Schau in ein paar Tagen nochmal auf dieser Seite vorbei — der Link hier aktiviert sich automatisch, sobald das Buch live ist.</p>
   </div>
 
+  <div class="card" id="series-card">
+    <div class="label" id="series-label">Mehr aus der Reihe</div>
+    <p id="series-text">Es gibt viele weitere Ausmalbücher für kleine Hände, jeweils mit 50 Motiven. Schau dir die ganze Serie an.</p>
+    <div class="review-buttons"><a class="review-btn" id="series-btn" href="/?lang=de">Alle Bücher der Serie ansehen</a></div>
+  </div>
+
   <div class="nl-card">
-    <p class="nl-hint" id="nl-hint">Willst du erfahren, wenn neue Bücher der Reihe erscheinen?</p>
+    <p class="nl-hint" id="nl-hint">Hol dir 5 exklusive Bonus-Ausmalbilder als PDF und erfahre, wenn neue Bücher der Reihe erscheinen.</p>
     <form id="nl-form">
       <div class="field">
         <label for="nl-email" id="nl-label">E-Mail-Adresse</label>
         <input id="nl-email" type="email" name="email" placeholder="deine@email.de" required autocomplete="email">
       </div>
       <input type="text" name="website" value="" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
-      <button type="submit" class="btn" id="nl-btn">Anmelden</button>
-      <p class="legal" id="nl-legal">DSGVO-konform · Jederzeit abbestellbar</p>
+      <button type="submit" class="btn" id="nl-btn">Bonus-Bilder holen</button>
+      <p class="legal" id="nl-legal">Du bekommst die Bonus-Bilder und gelegentlich Neuigkeiten per E-Mail. Jederzeit abbestellbar. <a href="/datenschutz">Datenschutz</a></p>
     </form>
     <p id="nl-message" class="nl-message" hidden></p>
   </div>
@@ -200,10 +206,14 @@
     document.documentElement.lang = 'en';
     headline.textContent = 'Thanks for coloring!';
     sub.textContent = 'We hope the book brought some joy.';
-    document.getElementById('nl-hint').textContent = 'Want to hear about new books in the series?';
-    document.getElementById('nl-btn').textContent = 'Sign up';
+    document.getElementById('nl-hint').textContent = 'Get 5 exclusive bonus coloring pages as a PDF and hear about new books in the series.';
+    document.getElementById('nl-btn').textContent = 'Get my bonus pages';
     document.getElementById('nl-label').textContent = 'Email address';
-    document.getElementById('nl-legal').textContent = 'Unsubscribe anytime';
+    document.getElementById('nl-legal').innerHTML = 'You will get the bonus pages and occasional news by email. Unsubscribe anytime. <a href="/datenschutz">Privacy (German)</a>';
+    document.getElementById('series-label').textContent = 'More from the series';
+    document.getElementById('series-text').textContent = 'There are many more coloring books for little hands, each with 50 motifs. Take a look at the whole series.';
+    document.getElementById('series-btn').textContent = 'See all books in the series';
+    document.getElementById('nl-email').placeholder = 'your@email.com';
     document.getElementById('review-label').textContent = 'Can you do us a favor?';
     document.getElementById('review-text').textContent =
       "A short, honest review on Amazon helps us a lot — it takes a minute and shows other parents whether the book is right for them.";
@@ -217,6 +227,8 @@
       ? `Thanks for coloring "${eintrag.titel}"!`
       : `Danke, dass du "${eintrag.titel}" ausgemalt hast!`;
   }
+
+  document.getElementById('series-btn').href = `/?lang=${sprache}`;
 
   const card = document.getElementById('review-card');
   const pending = document.getElementById('pending-card');
@@ -263,8 +275,8 @@
       });
       if (!res.ok) throw new Error('Fehler');
       msg.textContent = sprache === 'en'
-        ? 'Done! Check your inbox to confirm.'
-        : 'Geschafft! Schau in dein Postfach und bestätige deine Anmeldung.';
+        ? 'Almost done! We just sent you an email. Click the confirmation link in it (check your spam folder too) and your bonus pages will follow right away.'
+        : 'Fast geschafft! Wir haben dir eine E-Mail geschickt. Klicke darin auf den Bestätigungslink (schau auch im Spam-Ordner nach), dann bekommst du sofort deine Bonus-Bilder.';
       msg.className = 'nl-message success';
       msg.hidden = false;
       form.reset();
