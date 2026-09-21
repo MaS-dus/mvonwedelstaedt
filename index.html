@@ -240,6 +240,62 @@
   .card-link .arrow { transition: transform 0.2s ease; }
   .card:hover .card-link .arrow { transform: translateX(3px); }
 
+  /* ---------- Bonus signup ---------- */
+  .bonus {
+    max-width: 720px;
+    margin: -24px auto 84px;
+    padding: 0 24px;
+  }
+  .bonus-card {
+    background: var(--surface-2);
+    border: 1px solid var(--rule);
+    border-radius: 18px;
+    padding: 40px 40px 36px;
+  }
+  .bonus .eyebrow { color: var(--gold); margin-bottom: 12px; }
+  .bonus h2 { font-size: clamp(1.7rem, 3.4vw, 2.2rem); margin-bottom: 12px; }
+  .bonus-p { color: var(--ink-soft); line-height: 1.65; font-size: 1.02rem; margin: 0 0 24px; }
+  .bonus fieldset { border: 0; margin: 0 0 22px; padding: 0; min-width: 0; }
+  .bonus legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .bonus-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .pick { display: block; cursor: pointer; }
+  .pick input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+  .pick-body {
+    display: flex; flex-direction: column; gap: 10px; height: 100%;
+    background: var(--surface); border: 2px solid var(--rule); border-radius: 14px;
+    padding: 10px 10px 12px; text-align: center;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .pick-body img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; display: block; background: var(--surface-2); }
+  .pick-name { font-family: "Baloo 2", "Source Serif 4", serif; font-weight: 700; font-size: 1.02rem; line-height: 1.2; color: var(--ink); }
+  .pick:hover .pick-body { border-color: var(--gold-bright); }
+  .pick input:checked + .pick-body { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(169, 124, 63, 0.22); }
+  .pick input:focus-visible + .pick-body { outline: 2px solid var(--gold-bright); outline-offset: 3px; }
+  .bonus .field { margin-bottom: 16px; }
+  .bonus .field label { display: block; font-size: 0.875rem; font-weight: 600; color: var(--ink-soft); margin-bottom: 8px; }
+  .bonus .field input {
+    width: 100%; padding: 14px 16px; border: 1.5px solid var(--rule); border-radius: 10px;
+    font-size: 1rem; font-family: "Source Serif 4", serif; color: var(--ink); background: var(--surface);
+  }
+  .bonus .field input:focus { outline: none; border-color: var(--gold); }
+  .bonus-btn {
+    width: 100%; padding: 14px; background: var(--ink); color: var(--bg);
+    font-size: 0.9375rem; font-weight: 700; font-family: "Source Serif 4", serif;
+    border: none; border-radius: 10px; cursor: pointer; transition: opacity 150ms;
+  }
+  .bonus-btn:hover { opacity: 0.88; }
+  .bonus-btn:disabled { opacity: 0.6; cursor: default; }
+  .bonus-legal { font-size: 0.8125rem; color: var(--ink-soft); text-align: center; margin: 12px 0 0; }
+  .bonus-message { margin: 16px 0 0; padding: 12px 16px; border-radius: 10px; font-size: 0.9rem; text-align: center; }
+  .bonus-message.success { background: rgba(169,124,63,0.12); color: var(--gold); border: 1px solid rgba(169,124,63,0.3); }
+  .bonus-message.error { background: rgba(220,80,80,0.1); color: #c84444; border: 1px solid rgba(220,80,80,0.3); }
+  @media (max-width: 560px) {
+    .bonus-card { padding: 30px 20px 28px; }
+    .bonus-options { gap: 8px; }
+    .pick-body { padding: 8px 8px 10px; }
+    .pick-name { font-size: 0.9rem; }
+  }
+
   /* ---------- Privacy ---------- */
   .privacy {
     max-width: 720px;
@@ -298,6 +354,28 @@
     <p id="t-books-p">Gro&szlig;e Motive, dicke Linien, ein Bild pro Seite &ndash; f&uuml;r Kinder ab 3 Jahren. Alle B&uuml;cher gibt es als Taschenbuch bei Amazon.</p>
   </div>
   <div class="grid" id="grid"></div>
+</section>
+
+<section class="bonus" id="bonus">
+  <div class="bonus-card">
+    <p class="eyebrow" id="t-bonus-eyebrow">Gratis</p>
+    <h2 id="t-bonus-h2">Fünf Bonus-Ausmalbilder zum Mitnehmen</h2>
+    <p class="bonus-p" id="t-bonus-p">Such dir eins von drei Themen aus. Du bekommst fünf Bilder als PDF und hörst von mir, wenn ein neues Buch erscheint.</p>
+    <form id="bonus-form">
+      <fieldset>
+        <legend id="t-bonus-legend">Thema wählen</legend>
+        <div class="bonus-options" id="bonus-options"></div>
+      </fieldset>
+      <div class="field">
+        <label for="bonus-email" id="t-bonus-label">E-Mail-Adresse</label>
+        <input id="bonus-email" type="email" name="email" placeholder="deine@email.de" required autocomplete="email">
+      </div>
+      <input type="text" name="website" value="" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+      <button type="submit" class="bonus-btn" id="bonus-btn">Bonus-Bilder holen</button>
+      <p class="bonus-legal" id="t-bonus-legal">Du bekommst die Bonus-Bilder und gelegentlich Neuigkeiten per E-Mail. Jederzeit abbestellbar. <a href="/datenschutz">Datenschutz</a></p>
+    </form>
+    <p id="bonus-message" class="bonus-message" hidden></p>
+  </div>
 </section>
 
 <section class="privacy" id="datenschutz">
@@ -406,6 +484,17 @@
       booksH2: "Ausmalb&uuml;cher f&uuml;r kleine H&auml;nde",
       bio: "Ich habe drei Kinder und suche am Nachmittag ständig nach fünf ruhigen Minuten. Ausmalbücher sollten dabei helfen, aber die meisten waren zu kindisch, zu kompliziert oder das Papier war zu dünn.<br><br>Also habe ich eigene gemacht: dicke Linien, große Bilder, ein Motiv pro Seite. Wenn meine drei dann still über einem Bild hängen, hat sich das gelohnt. Aus dem Buch für zuhause ist eine ganze Reihe geworden, und es kommen noch mehr.",
       booksP: "Große Motive, dicke Linien, ein Bild pro Seite. Für Kinder von 3 bis 10 Jahren. Alle Bücher gibt es als Taschenbuch bei Amazon.",
+      bonusEyebrow: "Gratis",
+      bonusH2: "Fünf Bonus-Ausmalbilder zum Mitnehmen",
+      bonusP: "Such dir eins von drei Themen aus. Du bekommst fünf Bilder als PDF und hörst von mir, wenn ein neues Buch erscheint.",
+      bonusLegend: "Thema wählen",
+      bonusLabel: "E-Mail-Adresse",
+      bonusPlaceholder: "deine@email.de",
+      bonusBtn: "Bonus-Bilder holen",
+      bonusSending: "Sende...",
+      bonusLegal: 'Du bekommst die Bonus-Bilder und gelegentlich Neuigkeiten per E-Mail. Jederzeit abbestellbar. <a href="/datenschutz">Datenschutz</a>',
+      bonusOk: "Fast geschafft! Wir haben dir eine E-Mail geschickt. Klicke darin auf den Bestätigungslink (schau auch im Spam-Ordner nach), dann bekommst du sofort deine Bonus-Bilder.",
+      bonusErr: "Da ist etwas schiefgelaufen. Bitte später nochmal versuchen.",
       cardLink: "Auf Amazon ansehen",
       privacyH2: "Datenschutz",
       privacyP1: 'Diese Seite setzt keine Cookies oder Tracking-Skripte ein. Die vollst&auml;ndige <a href="/datenschutz">Datenschutzerkl&auml;rung</a> findest du hier.',
@@ -422,6 +511,17 @@
       booksH2: "Coloring Books for Little Hands",
       bio: "I have three kids, and in the afternoon I'm always hunting for five quiet minutes. Coloring books were supposed to help, but most were too babyish, too complicated, or printed on paper that was too thin.<br><br>So I made my own: thick lines, big pictures, one picture per page. When my three sit there quietly over a drawing, that's what it's for. What started as a fix for home is now a whole series, and more are on the way.",
       booksP: "Big pictures, thick lines, one picture per page. For kids ages 3 to 10. All books are available as paperback on Amazon.",
+      bonusEyebrow: "Free",
+      bonusH2: "Five free bonus coloring pages",
+      bonusP: "Pick one of three themes. You get five pictures as a PDF, and I'll let you know when a new book comes out.",
+      bonusLegend: "Choose a theme",
+      bonusLabel: "Email address",
+      bonusPlaceholder: "your@email.com",
+      bonusBtn: "Get my bonus pages",
+      bonusSending: "Sending…",
+      bonusLegal: 'You will get the bonus pages and occasional news by email. Unsubscribe anytime. <a href="/datenschutz">Privacy (German)</a>',
+      bonusOk: "Almost done! We just sent you an email. Click the confirmation link in it (check your spam folder too) and your bonus pages will follow right away.",
+      bonusErr: "Something went wrong. Please try again later.",
       cardLink: "View on Amazon",
       privacyH2: "Privacy",
       privacyP1: 'This site does not use cookies or tracking scripts. You can find the full <a href="/datenschutz">privacy policy</a> (German) here.',
@@ -470,6 +570,81 @@
       </div>`;
     grid.appendChild(a);
   }
+
+  // ---------- Bonus-Anmeldung (gleicher Webhook wie die QR-Seite /malbuch) ----------
+  // buchId muss ein Schluessel aus der BONUS-MAP im n8n-Knoten "Vorbereiten" sein.
+  const WEBHOOK_URL = "https://n8n.srv1082810.hstgr.cloud/webhook/kinderbuecher-bonus-subscribe";
+  const BONUS_THEMEN = [
+    { id: "07-dinosaurier", name: { de: "Dinosaurier", en: "Dinosaurs" },
+      titel: { de: "Dinosaurier", en: "Dinosaurs" } },
+    { id: "05-unterwasser", name: { de: "Unter Wasser", en: "Under the Sea" },
+      titel: { de: "Unterwasserwelt", en: "Under the Sea" } },
+    { id: "03-bauernhof", name: { de: "Bauernhof", en: "On the Farm" },
+      titel: { de: "Mein Bauernhof-Malbuch", en: "My Farm Coloring Book" } },
+  ];
+
+  document.getElementById("t-bonus-eyebrow").textContent = t.bonusEyebrow;
+  document.getElementById("t-bonus-h2").textContent = t.bonusH2;
+  document.getElementById("t-bonus-p").textContent = t.bonusP;
+  document.getElementById("t-bonus-legend").textContent = t.bonusLegend;
+  document.getElementById("t-bonus-label").textContent = t.bonusLabel;
+  document.getElementById("bonus-email").placeholder = t.bonusPlaceholder;
+  document.getElementById("bonus-btn").textContent = t.bonusBtn;
+  document.getElementById("t-bonus-legal").innerHTML = t.bonusLegal;
+
+  const optionen = document.getElementById("bonus-options");
+  BONUS_THEMEN.forEach((thema, i) => {
+    const label = document.createElement("label");
+    label.className = "pick";
+    label.innerHTML = `
+      <input type="radio" name="thema" value="${thema.id}"${i === 0 ? " checked" : ""}>
+      <span class="pick-body">
+        <img src="/covers/${thema.id}.jpg" alt="" loading="lazy">
+        <span class="pick-name">${thema.name[sprache]}</span>
+      </span>`;
+    optionen.appendChild(label);
+  });
+
+  const bonusForm = document.getElementById("bonus-form");
+  const bonusMsg = document.getElementById("bonus-message");
+  bonusForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(bonusForm);
+    if (data.get("website")) return; // Honeypot
+    const thema = BONUS_THEMEN.find((x) => x.id === data.get("thema")) || BONUS_THEMEN[0];
+    const payload = {
+      email: data.get("email"),
+      buchId: thema.id,
+      sprache: sprache,
+      buchTitel: thema.titel[sprache],
+      source: `Startseite - ${thema.id}-${sprache}`,
+    };
+    const btn = document.getElementById("bonus-btn");
+    const orig = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = t.bonusSending;
+    bonusMsg.hidden = true;
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error("Fehler");
+      bonusMsg.textContent = t.bonusOk;
+      bonusMsg.className = "bonus-message success";
+      bonusMsg.hidden = false;
+      bonusForm.reset();
+      btn.textContent = orig;
+      btn.disabled = false;
+    } catch (err) {
+      bonusMsg.textContent = t.bonusErr;
+      bonusMsg.className = "bonus-message error";
+      bonusMsg.hidden = false;
+      btn.textContent = orig;
+      btn.disabled = false;
+    }
+  });
 </script>
 
 </body>
