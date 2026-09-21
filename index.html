@@ -328,6 +328,8 @@
     font-size: 0.95rem;
   }
   .detail-amazon:hover { text-decoration: none; opacity: 0.88; }
+  .detail-shops { margin: 12px 0 0; font-size: 0.82rem; color: var(--ink-soft); line-height: 1.7; }
+  .detail-shops a { margin-right: 10px; white-space: nowrap; }
   .detail-bonus { display: block; margin-top: 16px; font-size: 0.9rem; }
   @media (max-width: 620px) {
     .detail-inner { grid-template-columns: minmax(0, 1fr); padding: 22px 20px 26px; gap: 20px; }
@@ -469,6 +471,7 @@
       <h3 class="detail-title" id="detail-title"></h3>
       <p class="detail-sub" id="detail-sub"></p>
       <a class="detail-amazon" id="detail-amazon" target="_blank" rel="noopener"></a>
+      <p class="detail-shops" id="detail-shops" hidden></p>
       <a class="detail-bonus" id="detail-bonus" href="#bonus"></a>
     </div>
   </div>
@@ -609,6 +612,8 @@
       filterCount: (n) => (n === 1 ? "1 Buch" : n + " Bücher"),
       detailBonus: "Fünf Bonus-Bilder gratis holen",
       detailClose: "Schließen",
+      shopButton: (dom) => "Auf Amazon ansehen",
+      otherShops: "",
       bonusEyebrow: "Gratis",
       bonusH2: "Fünf Bonus-Ausmalbilder zum Mitnehmen",
       bonusP: "Such dir eins von drei Themen aus. Du bekommst fünf Bilder als PDF und hörst von mir, wenn ein neues Buch erscheint.",
@@ -643,6 +648,8 @@
       filterCount: (n) => (n === 1 ? "1 book" : n + " books"),
       detailBonus: "Get five free bonus pages",
       detailClose: "Close",
+      shopButton: (dom) => "View on amazon." + dom,
+      otherShops: "Other Amazon stores:",
       bonusEyebrow: "Free",
       bonusH2: "Five free bonus coloring pages",
       bonusP: "Pick one of three themes. You get five pictures as a PDF, and I'll let you know when a new book comes out.",
@@ -735,6 +742,23 @@
   });
   filterAnwenden("alle");
 
+  // Amazon-Shop des Besuchers. Die ASIN ist in allen Shops gleich (auf amazon.co.uk geprueft).
+  // Deutsche Buecher: immer amazon.de (liefert auch nach AT und CH). Englische: nach Browser-Region,
+  // sonst nach Zeitzone, Standard amazon.com. Alles passiert im Browser, es wird nichts uebertragen.
+  function amazonShop() {
+    if (sprache === "de") return "de";
+    const nachRegion = { GB: "co.uk", IE: "ie", AU: "com.au", CA: "ca", US: "com" };
+    const region = (((navigator.languages && navigator.languages[0]) || navigator.language || "").split("-")[1] || "").toUpperCase();
+    if (nachRegion[region]) return nachRegion[region];
+    let zone = "";
+    try { zone = Intl.DateTimeFormat().resolvedOptions().timeZone || ""; } catch (e) { /* egal */ }
+    if (zone === "Europe/London") return "co.uk";
+    if (zone === "Europe/Dublin") return "ie";
+    if (zone.startsWith("Australia/")) return "com.au";
+    if (/^America\/(Toronto|Vancouver|Edmonton|Winnipeg|Halifax|St_Johns|Regina|Montreal|Moncton)/.test(zone)) return "ca";
+    return "com";
+  }
+
   // ---------- Detailansicht (Link auf ein einzelnes Buch: /#<buch-id>) ----------
   function detailOeffnen(id) {
     const buch = BUECHER.find((b) => b.id === id);
@@ -745,9 +769,27 @@
     titel.innerHTML = eintrag.titel;
     titel.style.color = buch.farbe;
     document.getElementById("detail-sub").innerHTML = eintrag.sub;
+    const shop = amazonShop();
     const amazon = document.getElementById("detail-amazon");
-    amazon.href = `https://www.${t.amazonDomain}/dp/${eintrag.asin}`;
-    amazon.innerHTML = `${t.cardLink} &rarr;`;
+    amazon.href = `https://www.amazon.${shop}/dp/${eintrag.asin}`;
+    amazon.innerHTML = `${t.shopButton(shop)} &rarr;`;
+    const shops = document.getElementById("detail-shops");
+    shops.replaceChildren();
+    if (sprache === "en") {
+      shops.append(t.otherShops + " ");
+      for (const dom of ["com", "co.uk", "ca", "com.au", "ie"]) {
+        if (dom === shop) continue;
+        const a = document.createElement("a");
+        a.href = `https://www.amazon.${dom}/dp/${eintrag.asin}`;
+        a.target = "_blank";
+        a.rel = "noopener";
+        a.textContent = `amazon.${dom}`;
+        shops.append(a);
+      }
+      shops.hidden = false;
+    } else {
+      shops.hidden = true;
+    }
     document.getElementById("detail-bonus").textContent = t.detailBonus;
     document.getElementById("detail-close").setAttribute("aria-label", t.detailClose);
     if (!detail.open) detail.showModal();
