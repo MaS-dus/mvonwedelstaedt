@@ -186,62 +186,156 @@
   .books-head h2 { font-size: clamp(2rem, 4vw, 2.7rem); margin-bottom: 14px; }
   .books-head p { color: var(--ink-soft); font-size: 1.02rem; line-height: 1.65; margin: 0; }
 
+  /* ---------- Altersfilter ---------- */
+  .filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: -24px auto 40px;
+  }
+  .chip {
+    padding: 9px 18px;
+    border-radius: 999px;
+    border: 1.5px solid var(--rule);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  .chip:hover { border-color: var(--gold); }
+  .chip[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .filter-count { color: var(--ink-soft); font-size: 0.85rem; margin-left: 6px; }
+
+  /* ---------- Kacheln ---------- */
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 28px;
+    grid-template-columns: repeat(auto-fill, minmax(128px, 1fr));
+    gap: 18px;
   }
-  .card {
+  .tile {
+    appearance: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    text-align: center;
+    cursor: pointer;
     background: var(--surface);
-    border-radius: 18px;
+    border-radius: 12px;
     overflow: hidden;
     box-shadow: var(--shadow);
     display: flex;
     flex-direction: column;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
-  @media (prefers-reduced-motion: no-preference) {
-    .card:hover { transform: translateY(-6px); }
-  }
-  .card-top { height: 6px; }
-  .card-img {
+  .tile-top { height: 4px; display: block; }
+  .tile-img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
     display: block;
     background: var(--surface-2);
   }
-  .card-body {
-    padding: 20px 22px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    flex: 1;
-  }
-  .card-title {
+  .tile-title {
     font-family: "Baloo 2", "Source Serif 4", serif;
     font-weight: 700;
-    font-size: 1.32rem;
-    line-height: 1.25;
-  }
-  .card-sub {
-    color: var(--ink-soft);
-    font-size: 0.9rem;
-    line-height: 1.5;
-    flex: 1;
-  }
-  .card-link {
-    margin-top: 10px;
-    font-family: "Source Serif 4", serif;
-    font-weight: 600;
-    font-size: 0.92rem;
-    color: var(--gold);
-    display: inline-flex;
+    font-size: 0.88rem;
+    line-height: 1.2;
+    padding: 8px 8px 10px;
+    min-height: 3.1em;
+    display: flex;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
   }
-  .card-link .arrow { transition: transform 0.2s ease; }
-  .card:hover .card-link .arrow { transform: translateX(3px); }
+  /* Vergroessern nur mit Maus und wenn Bewegung erwuenscht ist; Touch oeffnet direkt die Details */
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    .tile:hover, .tile:focus-visible {
+      transform: scale(1.28);
+      z-index: 6;
+      box-shadow: 0 26px 50px -18px rgba(34, 51, 59, 0.55);
+    }
+  }
+  .tile:focus-visible { outline: 2px solid var(--gold-bright); outline-offset: 3px; }
+
+  /* ---------- Detailansicht ---------- */
+  body:has(dialog[open]) { overflow: hidden; }
+  dialog#detail {
+    border: 0;
+    padding: 0;
+    border-radius: 18px;
+    background: var(--surface);
+    color: var(--ink);
+    width: min(760px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.5);
+  }
+  dialog#detail::backdrop { background: rgba(13, 20, 23, 0.62); }
+  .detail-inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+    gap: 28px;
+    padding: 28px;
+    align-items: center;
+  }
+  .detail-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    background: var(--surface-2);
+    display: block;
+  }
+  .detail-close {
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--surface-2);
+    color: var(--ink);
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+  }
+  .detail-close:hover { background: var(--rule); }
+  .detail-title {
+    font-family: "Baloo 2", "Source Serif 4", serif;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 1.15;
+    margin: 0 0 10px;
+    padding-right: 36px;
+  }
+  .detail-sub { color: var(--ink-soft); line-height: 1.6; margin: 0 0 22px; }
+  .detail-amazon {
+    display: inline-block;
+    padding: 14px 22px;
+    background: var(--ink);
+    color: var(--bg);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .detail-amazon:hover { text-decoration: none; opacity: 0.88; }
+  .detail-bonus { display: block; margin-top: 16px; font-size: 0.9rem; }
+  @media (max-width: 620px) {
+    .detail-inner { grid-template-columns: minmax(0, 1fr); padding: 22px 20px 26px; gap: 20px; }
+    .detail-img { max-width: 240px; margin: 0 auto; }
+    .detail-title { font-size: 1.6rem; }
+    .grid { grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 14px; }
+    .tile-title { font-size: 0.8rem; }
+  }
 
   /* ---------- Bonus signup ---------- */
   .bonus {
@@ -361,8 +455,24 @@
     <h2 id="t-books-h2">Ausmalb&uuml;cher f&uuml;r kleine H&auml;nde</h2>
     <p id="t-books-p">Gro&szlig;e Motive, dicke Linien, ein Bild pro Seite &ndash; f&uuml;r Kinder ab 3 Jahren. Alle B&uuml;cher gibt es als Taschenbuch bei Amazon.</p>
   </div>
+  <div class="filter" id="filter" role="group" aria-label="Nach Alter filtern">
+    <span class="filter-count" id="filter-count" aria-live="polite"></span>
+  </div>
   <div class="grid" id="grid"></div>
 </section>
+
+<dialog id="detail" aria-labelledby="detail-title">
+  <div class="detail-inner">
+    <button type="button" class="detail-close" id="detail-close" aria-label="Schließen">&times;</button>
+    <img class="detail-img" id="detail-img" alt="" width="320" height="320">
+    <div class="detail-info">
+      <h3 class="detail-title" id="detail-title"></h3>
+      <p class="detail-sub" id="detail-sub"></p>
+      <a class="detail-amazon" id="detail-amazon" target="_blank" rel="noopener"></a>
+      <a class="detail-bonus" id="detail-bonus" href="#bonus"></a>
+    </div>
+  </div>
+</dialog>
 
 <section class="bonus" id="bonus">
   <div class="bonus-card">
@@ -492,6 +602,13 @@
       booksH2: "Ausmalb&uuml;cher f&uuml;r kleine H&auml;nde",
       bio: "Ich habe drei Kinder und suchte am Nachmittag nach fünf ruhigen Minuten. Ausmalbücher sollten dabei helfen, aber die meisten waren entweder zu kindisch oder zu kompliziert, viele gefielen mir einfach nicht…<br><br>Also habe ich angefangen, eigene zu machen. Erst für die Kleineren mit dicken Linien, großen Bildern, ein Motiv pro Seite. Dann noch etwas für die Ältere, die schon sauer war, weil sie ihre eigenen wollte…<br>Wenn meine drei dann über ihren Bildern hängen, hat sich das gelohnt. Aus dem ersten Buch für zuhause ist schnell eine ganze Reihe geworden, und es kommen noch mehr. Gleichzeitig entstanden die ersten Bücher für die Ältere. So wie es aussieht, kommen da immer weitere dazu…",
       booksP: "Große Motive, dicke Linien, ein Bild pro Seite. Für Kinder von 3 bis 10 Jahren. Alle Bücher gibt es als Taschenbuch bei Amazon.",
+      filterLabel: "Nach Alter filtern",
+      filterAlle: "Alle",
+      filter36: "3 bis 6 Jahre",
+      filter610: "6 bis 10 Jahre",
+      filterCount: (n) => (n === 1 ? "1 Buch" : n + " Bücher"),
+      detailBonus: "Fünf Bonus-Bilder gratis holen",
+      detailClose: "Schließen",
       bonusEyebrow: "Gratis",
       bonusH2: "Fünf Bonus-Ausmalbilder zum Mitnehmen",
       bonusP: "Such dir eins von drei Themen aus. Du bekommst fünf Bilder als PDF und hörst von mir, wenn ein neues Buch erscheint.",
@@ -519,6 +636,13 @@
       booksH2: "Coloring Books for Little Hands",
       bio: "I have three kids, and in the afternoon I was looking for five quiet minutes. Coloring books were supposed to help, but most were either too babyish or too complicated, and plenty of them I just didn't like…<br><br>So I started making my own. First for the little ones, with thick lines, big pictures, one picture per page. Then something for my oldest, who was already annoyed because she wanted her own…<br>When my three are bent over their pictures, it's all worth it. What began as a first book for home quickly turned into a whole series, and more are coming. At the same time the first books for my oldest came along. The way it looks, more will keep joining…",
       booksP: "Big pictures, thick lines, one picture per page. For kids ages 3 to 10. All books are available as paperback on Amazon.",
+      filterLabel: "Filter by age",
+      filterAlle: "All",
+      filter36: "Ages 3 to 6",
+      filter610: "Ages 6 to 10",
+      filterCount: (n) => (n === 1 ? "1 book" : n + " books"),
+      detailBonus: "Get five free bonus pages",
+      detailClose: "Close",
       bonusEyebrow: "Free",
       bonusH2: "Five free bonus coloring pages",
       bonusP: "Pick one of three themes. You get five pictures as a PDF, and I'll let you know when a new book comes out.",
@@ -559,25 +683,83 @@
   document.getElementById("t-datenschutz").textContent = t.datenschutz;
   document.getElementById(sprache === "en" ? "lang-en" : "lang-de").setAttribute("aria-current", "true");
 
+  // Altersgruppe: Staffel 2 (Nr. 11 bis 20) ist fuer 6 bis 10, alles andere fuer 3 bis 6.
+  const alterVon = (id) => (/^(1[1-9]|20)-/.test(id) ? "6-10" : "3-6");
+
   const grid = document.getElementById("grid");
+  const detail = document.getElementById("detail");
+  const filterBar = document.getElementById("filter");
+  const zaehler = document.getElementById("filter-count");
+
   for (const buch of BUECHER) {
     const eintrag = buch[sprache];
     if (!eintrag.asin) continue; // in dieser Sprache noch nicht erhaeltlich
-    const a = document.createElement("a");
-    a.className = "card";
-    a.href = `https://www.${t.amazonDomain}/dp/${eintrag.asin}`;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.innerHTML = `
-      <div class="card-top" style="background:${buch.farbe}"></div>
-      <img class="card-img" src="/covers/${buch.id}.jpg" alt="" loading="lazy">
-      <div class="card-body">
-        <div class="card-title" style="color:${buch.farbe}">${eintrag.titel}</div>
-        <div class="card-sub">${eintrag.sub}</div>
-        <span class="card-link">${t.cardLink} <span class="arrow">&rarr;</span></span>
-      </div>`;
-    grid.appendChild(a);
+    const kachel = document.createElement("button");
+    kachel.type = "button";
+    kachel.className = "tile";
+    kachel.dataset.alter = alterVon(buch.id);
+    kachel.setAttribute("aria-haspopup", "dialog");
+    kachel.innerHTML = `
+      <span class="tile-top" style="background:${buch.farbe}"></span>
+      <img class="tile-img" src="/covers/${buch.id}.jpg" alt="" loading="lazy">
+      <span class="tile-title" style="color:${buch.farbe}">${eintrag.titel}</span>`;
+    kachel.addEventListener("click", () => detailOeffnen(buch.id));
+    grid.appendChild(kachel);
   }
+
+  // ---------- Altersfilter ----------
+  filterBar.setAttribute("aria-label", t.filterLabel);
+  for (const [wert, text] of [["alle", t.filterAlle], ["3-6", t.filter36], ["6-10", t.filter610]]) {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "chip";
+    chip.dataset.alter = wert;
+    chip.textContent = text;
+    filterBar.insertBefore(chip, zaehler);
+  }
+  function filterAnwenden(wert) {
+    let n = 0;
+    for (const kachel of grid.children) {
+      const zeigen = wert === "alle" || kachel.dataset.alter === wert;
+      kachel.hidden = !zeigen;
+      if (zeigen) n++;
+    }
+    for (const chip of filterBar.querySelectorAll(".chip")) {
+      chip.setAttribute("aria-pressed", String(chip.dataset.alter === wert));
+    }
+    zaehler.textContent = t.filterCount(n);
+  }
+  filterBar.addEventListener("click", (e) => {
+    const chip = e.target.closest(".chip");
+    if (chip) filterAnwenden(chip.dataset.alter);
+  });
+  filterAnwenden("alle");
+
+  // ---------- Detailansicht (Link auf ein einzelnes Buch: /#<buch-id>) ----------
+  function detailOeffnen(id) {
+    const buch = BUECHER.find((b) => b.id === id);
+    if (!buch || !buch[sprache].asin) return;
+    const eintrag = buch[sprache];
+    document.getElementById("detail-img").src = `/covers/${id}.jpg`;
+    const titel = document.getElementById("detail-title");
+    titel.innerHTML = eintrag.titel;
+    titel.style.color = buch.farbe;
+    document.getElementById("detail-sub").innerHTML = eintrag.sub;
+    const amazon = document.getElementById("detail-amazon");
+    amazon.href = `https://www.${t.amazonDomain}/dp/${eintrag.asin}`;
+    amazon.innerHTML = `${t.cardLink} &rarr;`;
+    document.getElementById("detail-bonus").textContent = t.detailBonus;
+    document.getElementById("detail-close").setAttribute("aria-label", t.detailClose);
+    if (!detail.open) detail.showModal();
+    history.replaceState(null, "", `${location.pathname}${location.search}#${id}`);
+  }
+  detail.addEventListener("close", () => {
+    history.replaceState(null, "", location.pathname + location.search);
+  });
+  detail.addEventListener("click", (e) => { if (e.target === detail) detail.close(); }); // Klick auf den Hintergrund
+  document.getElementById("detail-close").addEventListener("click", () => detail.close());
+  document.getElementById("detail-bonus").addEventListener("click", () => detail.close());
+  if (location.hash.length > 1) detailOeffnen(decodeURIComponent(location.hash.slice(1)));
 
   // ---------- Bonus-Anmeldung (gleicher Webhook wie die QR-Seite /malbuch) ----------
   // buchId muss ein Schluessel aus der BONUS-MAP im n8n-Knoten "Vorbereiten" sein.
