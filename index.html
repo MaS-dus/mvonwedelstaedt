@@ -257,8 +257,8 @@
   .bonus-p { color: var(--ink-soft); line-height: 1.65; font-size: 1.02rem; margin: 0 0 24px; }
   .bonus fieldset { border: 0; margin: 0 0 22px; padding: 0; min-width: 0; }
   .bonus legend { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
-  .bonus-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
-  .pick { display: block; cursor: pointer; }
+  .bonus-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+  .pick { display: block; cursor: pointer; min-width: 0; }
   .pick input { position: absolute; opacity: 0; width: 1px; height: 1px; }
   .pick-body {
     display: flex; flex-direction: column; gap: 10px; height: 100%;
@@ -267,7 +267,7 @@
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
   }
   .pick-body img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; display: block; background: var(--surface-2); }
-  .pick-name { font-family: "Baloo 2", "Source Serif 4", serif; font-weight: 700; font-size: 1.02rem; line-height: 1.2; color: var(--ink); }
+  .pick-name { font-family: "Baloo 2", "Source Serif 4", serif; font-weight: 700; font-size: 1.02rem; line-height: 1.2; color: var(--ink); overflow-wrap: anywhere; }
   .pick:hover .pick-body { border-color: var(--gold-bright); }
   .pick input:checked + .pick-body { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(169, 124, 63, 0.22); }
   .pick input:focus-visible + .pick-body { outline: 2px solid var(--gold-bright); outline-offset: 3px; }
@@ -294,6 +294,11 @@
     .bonus-options { gap: 8px; }
     .pick-body { padding: 8px 8px 10px; }
     .pick-name { font-size: 0.9rem; }
+  }
+  @media (max-width: 380px) {
+    .bonus { padding: 0 14px; }
+    .bonus-card { padding: 26px 14px 24px; }
+    .pick-name { font-size: 0.8rem; }
   }
 
   /* ---------- Privacy ---------- */
