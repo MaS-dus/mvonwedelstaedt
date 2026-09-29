@@ -6,7 +6,7 @@
 //
 // IDs eintragen, sobald vorhanden (sonst bleibt das Banner unsichtbar,
 // es gibt ja noch nichts zuzustimmen):
-window.GA4_ID = '';           // z.B. 'G-XXXXXXXXXX'
+window.GA4_ID = 'G-MW4XJC3HX0';
 window.ADS_CONVERSION_ID = ''; // z.B. 'AW-XXXXXXXXX'
 window.ADS_CONVERSION_LABEL = ''; // z.B. 'AbCdEfGhIjK'
 
