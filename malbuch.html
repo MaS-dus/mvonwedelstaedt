@@ -199,7 +199,34 @@
     "17-drachen": { "de": { "titel": "Drachen und Fabelwesen", "asin": "B0HKJXDGRK" }, "en": { "titel": "Dragons and Mythical Creatures", "asin": "B0HKJTQFM7" } },
     "18-maschinen": { "de": { "titel": "Autos und Maschinen", "asin": null }, "en": { "titel": "Cars and Machines", "asin": null } },
     "19-voegel": { "de": { "titel": "Vögel der Welt", "asin": null }, "en": { "titel": "Birds of the World", "asin": null } },
-    "20-ritter": { "de": { "titel": "Ritter und Burgen", "asin": null }, "en": { "titel": "Knights and Castles", "asin": null } }
+    "20-ritter": { "de": { "titel": "Ritter und Burgen", "asin": null }, "en": { "titel": "Knights and Castles", "asin": null } },
+    // Raetselbuecher (typ steuert die Texte, siehe RAETSEL_TEXTE). asin erst nach dem Amazon-Livegang eintragen.
+    "30-labyrinth-dschungel": { "typ": "labyrinth", "de": { "titel": "Dschungel Labyrinth Rätselbuch", "asin": null }, "en": { "titel": "Jungle Maze Book", "asin": null } },
+    "31-labyrinth-dino": { "typ": "labyrinth", "de": { "titel": "Dinosaurier Labyrinth Rätselbuch", "asin": null }, "en": { "titel": "Dinosaur Maze Book", "asin": null } },
+    "32-labyrinth-weltraum": { "typ": "labyrinth", "de": { "titel": "Weltraum Labyrinth Rätselbuch", "asin": null }, "en": { "titel": "Space Maze Book", "asin": null } },
+    "33-labyrinth-meer": { "typ": "labyrinth", "de": { "titel": "Meer Labyrinth Rätselbuch", "asin": null }, "en": { "titel": "Ocean Maze Book", "asin": null } },
+    "34-labyrinth-einhorn": { "typ": "labyrinth", "de": { "titel": "Einhorn Labyrinth Rätselbuch", "asin": null }, "en": { "titel": "Unicorn Maze Book", "asin": null } },
+    "40-wortsuche-dschungel": { "typ": "wortsuche", "de": { "titel": "Dschungel Wortsuche Rätselbuch", "asin": null }, "en": { "titel": "Jungle Word Search", "asin": null } },
+    "41-wortsuche-dino": { "typ": "wortsuche", "de": { "titel": "Dinosaurier Wortsuche Rätselbuch", "asin": null }, "en": { "titel": "Dinosaur Word Search", "asin": null } },
+    "42-wortsuche-weltraum": { "typ": "wortsuche", "de": { "titel": "Weltraum Wortsuche Rätselbuch", "asin": null }, "en": { "titel": "Space Word Search", "asin": null } },
+    "43-wortsuche-meer": { "typ": "wortsuche", "de": { "titel": "Meer Wortsuche Rätselbuch", "asin": null }, "en": { "titel": "Ocean Word Search", "asin": null } },
+    "44-wortsuche-weihnachten": { "typ": "wortsuche", "de": { "titel": "Weihnachtsrätsel Wortsuche", "asin": null }, "en": { "titel": "Christmas Word Search", "asin": null } }
+  };
+
+  // Texte fuer Raetselbuecher (statt "Ausmalen"/"Ausmalbilder"). bonus = Name des Gratis-Extras.
+  const RAETSEL_TEXTE = {
+    labyrinth: {
+      de: { bonus: 'Extra-Labyrinthe', hint: 'Hol dir 5 Extra-Labyrinthe als PDF zum Ausdrucken und erfahre, wenn neue Bücher der Reihe erscheinen.',
+            btn: 'Extra-Labyrinthe holen' },
+      en: { bonus: 'extra mazes', hint: 'Get 5 extra mazes as a printable PDF and hear about new books in the series.',
+            btn: 'Get my extra mazes' }
+    },
+    wortsuche: {
+      de: { bonus: 'Extra-Wortsuchrätsel', hint: 'Hol dir 5 Extra-Wortsuchrätsel als PDF zum Ausdrucken und erfahre, wenn neue Bücher der Reihe erscheinen.',
+            btn: 'Extra-Wortsuchrätsel holen' },
+      en: { bonus: 'extra word searches', hint: 'Get 5 extra word searches as a printable PDF and hear about new books in the series.',
+            btn: 'Get my extra word searches' }
+    }
   };
 
   const TLD_FUER_SPRACHE = { de: ['de'], en: ['com', 'ca', 'com.au', 'co.uk'] };
@@ -240,7 +267,30 @@
       "This book was just submitted to Amazon and isn't visible yet. Check back on this page in a few days — the link here will activate automatically once the book is live.";
   }
 
-  if (eintrag) {
+  const raetsel = buchId && BUECHER[buchId] && BUECHER[buchId].typ ? RAETSEL_TEXTE[BUECHER[buchId].typ][sprache] : null;
+
+  if (raetsel) {
+    // Raetselbuch: eigene Texte statt "Ausmalen"/"Ausmalbilder"
+    const de = sprache === 'de';
+    document.title = de ? 'Danke fürs Rätseln | M. von Wedelstaedt' : 'Thanks for puzzling | M. von Wedelstaedt';
+    document.querySelector('.eyebrow').textContent = de ? 'Rätselbuch-Reihe' : 'Puzzle book series';
+    headline.textContent = de ? `Danke fürs Rätseln mit „${eintrag.titel}“!` : `Thanks for puzzling with "${eintrag.titel}"!`;
+    sub.textContent = de ? 'Wir hoffen, die Rätsel haben Freude gemacht.' : 'We hope you enjoyed the puzzles.';
+    document.getElementById('review-text').textContent = de
+      ? 'Eine kurze, ehrliche Rezension auf Amazon hilft uns sehr. Sie dauert eine Minute und zeigt anderen Eltern, ob das Buch zu ihnen passt.'
+      : 'A short, honest review on Amazon helps us a lot. It takes a minute and shows other parents whether the book is right for them.';
+    document.getElementById('series-text').textContent = de
+      ? 'Es gibt weitere Rätselbücher und Malbücher für kleine Hände. Schau dir die ganze Reihe an.'
+      : 'There are more puzzle books and coloring books for little hands. Take a look at the whole series.';
+    document.getElementById('pending-text').textContent = de
+      ? 'Dieses Buch ist gerade frisch bei Amazon eingereicht und noch nicht sichtbar. Schau in ein paar Tagen nochmal auf dieser Seite vorbei. Der Link hier aktiviert sich automatisch, sobald das Buch live ist.'
+      : "This book was just submitted to Amazon and isn't visible yet. Check back on this page in a few days. The link here will activate automatically once the book is live.";
+    document.getElementById('nl-hint').textContent = raetsel.hint;
+    document.getElementById('nl-btn').textContent = raetsel.btn;
+    document.getElementById('nl-legal').innerHTML = de
+      ? `Du bekommst die ${raetsel.bonus} und gelegentlich Neuigkeiten per E-Mail. Jederzeit abbestellbar. <a href="/datenschutz">Datenschutz</a>`
+      : `You will get the ${raetsel.bonus} and occasional news by email. Unsubscribe anytime. <a href="/datenschutz">Privacy (German)</a>`;
+  } else if (eintrag) {
     headline.textContent = sprache === 'en'
       ? `Thanks for coloring "${eintrag.titel}"!`
       : `Danke, dass du "${eintrag.titel}" ausgemalt hast!`;
@@ -292,9 +342,10 @@
         body: JSON.stringify(payload),
       });
       if (!res.ok) throw new Error('Fehler');
+      const wasKommt = raetsel ? raetsel.bonus : null;
       msg.textContent = sprache === 'en'
-        ? 'Almost done! We just sent you an email. Click the confirmation link in it (check your spam folder too) and your bonus pages will follow right away.'
-        : 'Fast geschafft! Wir haben dir eine E-Mail geschickt. Klicke darin auf den Bestätigungslink (schau auch im Spam-Ordner nach), dann bekommst du sofort deine Bonus-Bilder.';
+        ? `Almost done! We just sent you an email. Click the confirmation link in it (check your spam folder too) and your ${wasKommt || 'bonus pages'} will follow right away.`
+        : `Fast geschafft! Wir haben dir eine E-Mail geschickt. Klicke darin auf den Bestätigungslink (schau auch im Spam-Ordner nach), dann bekommst du sofort deine ${wasKommt || 'Bonus-Bilder'}.`;
       msg.className = 'nl-message success';
       msg.hidden = false;
       form.reset();
