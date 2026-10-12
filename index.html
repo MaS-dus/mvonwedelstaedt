@@ -295,7 +295,7 @@
   .tile-top { height: 4px; display: block; }
   .tile-img {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1000 / 1293; /* echte Amazon-Cover, Hochformat */
     object-fit: cover;
     display: block;
     background: var(--surface-2);
@@ -345,7 +345,8 @@
   }
   .detail-img {
     width: 100%;
-    aspect-ratio: 1 / 1;
+    height: auto;
+    aspect-ratio: 1000 / 1293;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: var(--shadow);
@@ -423,7 +424,7 @@
     padding: 10px 10px 12px; text-align: center;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
   }
-  .pick-body img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 8px; display: block; background: var(--surface-2); }
+  .pick-body img { width: 100%; aspect-ratio: 1000 / 1293; object-fit: cover; border-radius: 8px; display: block; background: var(--surface-2); }
   .pick-name { font-family: "Baloo 2", "Source Serif 4", serif; font-weight: 700; font-size: 1.02rem; line-height: 1.2; color: var(--ink); overflow-wrap: anywhere; }
   .pick:hover .pick-body { border-color: var(--gold-bright); }
   .pick input:checked + .pick-body { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(169, 124, 63, 0.22); }
@@ -524,7 +525,7 @@
 <dialog id="detail" aria-labelledby="detail-title">
   <div class="detail-inner">
     <button type="button" class="detail-close" id="detail-close" aria-label="Schließen">&times;</button>
-    <img class="detail-img" id="detail-img" alt="" width="320" height="320">
+    <img class="detail-img" id="detail-img" alt="" width="320" height="414">
     <div class="detail-info">
       <h3 class="detail-title" id="detail-title"></h3>
       <p class="detail-sub" id="detail-sub"></p>
@@ -765,6 +766,8 @@
   const params = new URLSearchParams(window.location.search);
   const sprache = params.get("lang") === "en" ? "en" : "de";
   const t = TEXTE[sprache];
+  // Echte Amazon-Cover je Sprache (EN-Cover tragen den englischen Titel)
+  const coverPfad = (id) => `/covers/${id}${sprache === "en" ? "-en" : ""}.jpg`;
 
   document.documentElement.lang = t.htmlLang;
   document.getElementById("t-eyebrow-hero").innerHTML = t.eyebrowHero;
@@ -798,7 +801,7 @@
     kachel.setAttribute("aria-haspopup", "dialog");
     kachel.innerHTML = `
       <span class="tile-top" style="background:${buch.farbe}"></span>
-      <img class="tile-img" src="/covers/${buch.id}.jpg" alt="${eintrag.titel} &mdash; Cover" loading="lazy">
+      <img class="tile-img" src="${coverPfad(buch.id)}" alt="${eintrag.titel} &mdash; Cover" loading="lazy">
       <span class="tile-title" style="color:${buch.farbe}">${eintrag.titel}</span>`;
     kachel.addEventListener("click", () => detailOeffnen(buch.id));
     grid.appendChild(kachel);
@@ -855,7 +858,7 @@
     if (!buch || !buch[sprache].asin) return;
     const eintrag = buch[sprache];
     const detailImg = document.getElementById("detail-img");
-    detailImg.src = `/covers/${id}.jpg`;
+    detailImg.src = coverPfad(id);
     detailImg.alt = `${eintrag.titel} — Cover`;
     const titel = document.getElementById("detail-title");
     titel.innerHTML = eintrag.titel;
@@ -925,7 +928,7 @@
     label.innerHTML = `
       <input type="radio" name="thema" value="${thema.id}"${i === 0 ? " checked" : ""}>
       <span class="pick-body">
-        <img src="/covers/${thema.id}.jpg" alt="" loading="lazy">
+        <img src="${coverPfad(thema.id)}" alt="" loading="lazy">
         <span class="pick-name">${thema.name[sprache]}</span>
       </span>`;
     optionen.appendChild(label);
