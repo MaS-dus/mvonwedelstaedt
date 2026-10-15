@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="p:domain_verify" content="ef978efb78d8b2c78567ef743ccc1d6d"/>
 <title>Malb&uuml;cher &amp; R&auml;tselb&uuml;cher f&uuml;r Kinder &ndash; M. von Wedelstaedt</title>
-<meta name="description" content="Malb&uuml;cher, Ausmalb&uuml;cher und Wortsuchr&auml;tsel f&uuml;r Kinder von 3 bis 10 Jahren &ndash; dicke Linien, gro&szlig;e Motive, ein Bild pro Seite. Die ganze Reihe von M. von Wedelstaedt als Taschenbuch bei Amazon.">
+<meta name="description" content="Malb&uuml;cher, Ausmalb&uuml;cher und Wortsuchr&auml;tsel f&uuml;r Kinder von 3 bis 10 Jahren &ndash; dicke Linien, gro&szlig;e Motive, ein Bild pro Seite. Die ganze Reihe von M. von Wedelstaedt als Taschenbuch bei Amazon oder als PDF zum Ausdrucken bei Etsy.">
 <link rel="canonical" href="https://mvonwedelstaedt.com/">
 <link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/">
 <link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/?lang=en">
@@ -13,14 +13,14 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="M. von Wedelstaedt">
 <meta property="og:title" content="Malb&uuml;cher &amp; R&auml;tselb&uuml;cher f&uuml;r Kinder &ndash; M. von Wedelstaedt">
-<meta property="og:description" content="Dicke Linien, gro&szlig;e Motive, ein Bild pro Seite. Malb&uuml;cher f&uuml;r Kinder von 3 bis 10 Jahren, als Taschenbuch bei Amazon.">
+<meta property="og:description" content="Dicke Linien, gro&szlig;e Motive, ein Bild pro Seite. Malb&uuml;cher f&uuml;r Kinder von 3 bis 10 Jahren, als Taschenbuch bei Amazon oder als PDF bei Etsy.">
 <meta property="og:image" content="https://mvonwedelstaedt.com/mvw-logo.png">
 <meta property="og:url" content="https://mvonwedelstaedt.com/">
 <meta property="og:locale" content="de_DE">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Malb&uuml;cher &amp; R&auml;tselb&uuml;cher f&uuml;r Kinder &ndash; M. von Wedelstaedt">
-<meta name="twitter:description" content="Dicke Linien, gro&szlig;e Motive, ein Bild pro Seite. Malb&uuml;cher f&uuml;r Kinder von 3 bis 10 Jahren, als Taschenbuch bei Amazon.">
+<meta name="twitter:description" content="Dicke Linien, gro&szlig;e Motive, ein Bild pro Seite. Malb&uuml;cher f&uuml;r Kinder von 3 bis 10 Jahren, als Taschenbuch bei Amazon oder als PDF bei Etsy.">
 <meta name="twitter:image" content="https://mvonwedelstaedt.com/mvw-logo.png">
 <link rel="icon" type="image/png" href="/favicon-32.png">
 <link rel="icon" href="/favicon.ico" sizes="any">
@@ -388,6 +388,18 @@
     font-size: 0.95rem;
   }
   .detail-amazon:hover { text-decoration: none; opacity: 0.88; }
+  .detail-buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+  .detail-buttons [hidden] { display: none; }
+  .detail-etsy {
+    display: inline-block;
+    padding: 12px 20px;
+    border: 2px solid var(--ink);
+    color: var(--ink);
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .detail-etsy:hover { text-decoration: none; background: var(--surface-2); }
   .detail-shops { margin: 12px 0 0; font-size: 0.82rem; color: var(--ink-soft); line-height: 1.7; }
   .detail-shops a { margin-right: 10px; white-space: nowrap; }
   .detail-bonus { display: block; margin-top: 16px; font-size: 0.9rem; }
@@ -515,7 +527,7 @@
   <div class="books-head">
     <p class="eyebrow" id="t-eyebrow-books">Die Reihe</p>
     <h2 id="t-books-h2">Ausmalb&uuml;cher f&uuml;r kleine H&auml;nde</h2>
-    <p id="t-books-p">Gro&szlig;e Motive, dicke Linien, ein Bild pro Seite &ndash; f&uuml;r Kinder ab 3 Jahren. Alle B&uuml;cher gibt es als Taschenbuch bei Amazon.</p>
+    <p id="t-books-p">Gro&szlig;e Motive, dicke Linien, ein Bild pro Seite &ndash; f&uuml;r Kinder ab 3 Jahren. Viele Titel gibt es als Taschenbuch bei Amazon, alle auch als PDF zum sofort Ausdrucken bei Etsy.</p>
   </div>
   <div class="filter" id="filter" role="group" aria-label="Nach Alter filtern">
     <span class="filter-count" id="filter-count" aria-live="polite"></span>
@@ -530,7 +542,10 @@
     <div class="detail-info">
       <h3 class="detail-title" id="detail-title"></h3>
       <p class="detail-sub" id="detail-sub"></p>
-      <a class="detail-amazon" id="detail-amazon" target="_blank" rel="noopener"></a>
+      <div class="detail-buttons">
+        <a class="detail-amazon" id="detail-amazon" target="_blank" rel="noopener"></a>
+        <a class="detail-etsy" id="detail-etsy" target="_blank" rel="noopener" hidden></a>
+      </div>
       <p class="detail-shops" id="detail-shops" hidden></p>
       <a class="detail-bonus" id="detail-bonus" href="#bonus"></a>
     </div>
@@ -564,7 +579,7 @@
     <h2 id="t-privacy-h2">Datenschutz</h2>
     <p id="t-privacy-p1">Diese Seite setzt keine Cookies oder Tracking-Skripte ein. Die vollst&auml;ndige <a href="/datenschutz">Datenschutzerkl&auml;rung</a> findest du hier.</p>
     <p id="t-privacy-p2">Die zu dieser Marke geh&ouml;rende Pinterest-App ver&ouml;ffentlicht ausschlie&szlig;lich Inhalte auf dem eigenen Pinterest-Konto von M. von Wedelstaedt. Sie greift auf keine Pins, Pinnw&auml;nde oder Daten anderer Pinterest-Nutzer:innen zu und wird nicht f&uuml;r andere Personen oder Unternehmen betrieben.</p>
-    <p id="t-privacy-p3">Links zu Buchtiteln f&uuml;hren zu amazon.de bzw. amazon.com. Dort gilt jeweils die Datenschutzerkl&auml;rung von Amazon.</p>
+    <p id="t-privacy-p3">Links zu Buchtiteln f&uuml;hren zu amazon.de bzw. amazon.com und zu etsy.com. Dort gilt jeweils die Datenschutzerkl&auml;rung von Amazon bzw. Etsy.</p>
   </div>
 </section>
 
@@ -581,112 +596,112 @@
   // fuer diese Sprache ausgeblendet.
   const BUECHER = [
     { id: "01-tierbabys", farbe: "#EF6351",
-      de: { titel: "S&uuml;&szlig;e Tierbabys", sub: "50 zauberhafte Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HFN75FX3" },
-      en: { titel: "Cute Baby Animals", sub: "50 Adorable Coloring Pages for Kids Ages 3 and Up", asin: "B0HFN5LZQD" } },
+      de: { titel: "S&uuml;&szlig;e Tierbabys", sub: "50 zauberhafte Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HFN75FX3", etsy: "4595830426" },
+      en: { titel: "Cute Baby Animals", sub: "50 Adorable Coloring Pages for Kids Ages 3 and Up", asin: "B0HFN5LZQD", etsy: "4595809695" } },
     { id: "02-tierfamilien", farbe: "#457B9D",
-      de: { titel: "Tierfamilien", sub: "50 Ausmalbilder von Mama, Papa und ihren Kleinen", asin: "B0HFN67D3V" },
-      en: { titel: "Animal Families", sub: "50 Coloring Pages of Animal Mums, Dads and Their Little Ones", asin: "B0HFP529X1" } },
+      de: { titel: "Tierfamilien", sub: "50 Ausmalbilder von Mama, Papa und ihren Kleinen", asin: "B0HFN67D3V", etsy: "4595826974" },
+      en: { titel: "Animal Families", sub: "50 Coloring Pages of Animal Mums, Dads and Their Little Ones", asin: "B0HFP529X1", etsy: "4595806329" } },
     { id: "03-bauernhof", farbe: "#5C8B3E",
-      de: { titel: "Mein Bauernhof-Malbuch", sub: "50 Ausmalbilder vom Bauernhof f&uuml;r Kinder ab 3 Jahren", asin: "B0HJCT162M" },
-      en: { titel: "My Farm Coloring Book", sub: "50 Farm Coloring Pages for Kids Ages 3 and Up", asin: "B0HK7DRXBL" } },
+      de: { titel: "Mein Bauernhof-Malbuch", sub: "50 Ausmalbilder vom Bauernhof f&uuml;r Kinder ab 3 Jahren", asin: "B0HJCT162M", etsy: "4595810649" },
+      en: { titel: "My Farm Coloring Book", sub: "50 Farm Coloring Pages for Kids Ages 3 and Up", asin: "B0HK7DRXBL", etsy: "4595833020" } },
     { id: "04-safari", farbe: "#BC4B26",
-      de: { titel: "Safari und Dschungel", sub: "50 wilde Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HFN59WMB" },
-      en: { titel: "Safari and Jungle", sub: "50 Wild Coloring Pages for Kids Ages 3 and Up", asin: "B0HFNQDSXM" } },
+      de: { titel: "Safari und Dschungel", sub: "50 wilde Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HFN59WMB", etsy: "4595812273" },
+      en: { titel: "Safari and Jungle", sub: "50 Wild Coloring Pages for Kids Ages 3 and Up", asin: "B0HFNQDSXM", etsy: "4595812931" } },
     { id: "05-unterwasser", farbe: "#1D6E9E",
-      de: { titel: "Unterwasserwelt", sub: "50 Ausmalbilder aus dem Meer f&uuml;r Kinder ab 3 Jahren", asin: "B0HFN5VKP6" },
-      en: { titel: "Under the Sea", sub: "50 Ocean Coloring Pages for Kids Ages 3 and Up", asin: "B0HFP6XQ5S" } },
+      de: { titel: "Unterwasserwelt", sub: "50 Ausmalbilder aus dem Meer f&uuml;r Kinder ab 3 Jahren", asin: "B0HFN5VKP6", etsy: "4595804097" },
+      en: { titel: "Under the Sea", sub: "50 Ocean Coloring Pages for Kids Ages 3 and Up", asin: "B0HFP6XQ5S", etsy: "4595804725" } },
     { id: "06-einhoerner", farbe: "#9B5DE5",
-      de: { titel: "Einh&ouml;rner und Zauberwesen", sub: "50 magische Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HFNN7NYB" },
-      en: { titel: "Unicorns and Magical Creatures", sub: "50 Magical Coloring Pages for Kids Ages 3 and Up", asin: "B0HFQR8YJB" } },
+      de: { titel: "Einh&ouml;rner und Zauberwesen", sub: "50 magische Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HFNN7NYB", etsy: "4595813965" },
+      en: { titel: "Unicorns and Magical Creatures", sub: "50 Magical Coloring Pages for Kids Ages 3 and Up", asin: "B0HFQR8YJB", etsy: "4595814949" } },
     { id: "07-dinosaurier", farbe: "#2E7D5B",
-      de: { titel: "Dinosaurier", sub: "50 urzeitliche Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HGBC76T5" },
-      en: { titel: "Dinosaurs", sub: "50 Prehistoric Coloring Pages for Kids Ages 3 and Up", asin: "B0HGBRFQDW" } },
+      de: { titel: "Dinosaurier", sub: "50 urzeitliche Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HGBC76T5", etsy: "4595800905" },
+      en: { titel: "Dinosaurs", sub: "50 Prehistoric Coloring Pages for Kids Ages 3 and Up", asin: "B0HGBRFQDW", etsy: "4595803425" } },
     { id: "08-fahrzeuge", farbe: "#D6483B",
-      de: { titel: "Fahrzeuge", sub: "50 Ausmalbilder von Bagger, Auto und Rakete ab 3 Jahren", asin: "B0HGB662ZX" },
-      en: { titel: "Things That Go", sub: "50 Vehicle Coloring Pages for Kids Ages 3 and Up", asin: "B0HJ64R68N" } },
+      de: { titel: "Fahrzeuge", sub: "50 Ausmalbilder von Bagger, Auto und Rakete ab 3 Jahren", asin: "B0HGB662ZX", etsy: "4595828814" },
+      en: { titel: "Things That Go", sub: "50 Vehicle Coloring Pages for Kids Ages 3 and Up", asin: "B0HJ64R68N", etsy: "4595808233" } },
     { id: "09-haustiere", farbe: "#9C5A2E",
-      de: { titel: "Meine Haustiere", sub: "50 Ausmalbilder von Hund, Katze &amp; Co. ab 3 Jahren", asin: "B0HJFBV2QY" },
-      en: { titel: "My Pets", sub: "50 Pet Coloring Pages for Kids Ages 3 and Up", asin: "B0HJFQTMZN" } },
+      de: { titel: "Meine Haustiere", sub: "50 Ausmalbilder von Hund, Katze &amp; Co. ab 3 Jahren", asin: "B0HJFBV2QY", etsy: "4595837108" },
+      en: { titel: "My Pets", sub: "50 Pet Coloring Pages for Kids Ages 3 and Up", asin: "B0HJFQTMZN", etsy: "4595816517" } },
     { id: "10-weihnachten", farbe: "#B3202E",
-      de: { titel: "Weihnachten mit Tieren", sub: "50 festliche Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HGQXJVKR" },
-      en: { titel: "Christmas with Animals", sub: "50 Festive Coloring Pages for Kids Ages 3 and Up", asin: "B0HGR64QBF" } },
+      de: { titel: "Weihnachten mit Tieren", sub: "50 festliche Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HGQXJVKR", etsy: "4595804958" },
+      en: { titel: "Christmas with Animals", sub: "50 Festive Coloring Pages for Kids Ages 3 and Up", asin: "B0HGR64QBF", etsy: "4595784369" } },
     { id: "21-halloween", farbe: "#E8892B",
-      de: { titel: "Halloweenspa&szlig;", sub: "50 fr&ouml;hliche Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HL3DWP82" },
-      en: { titel: "Happy Halloween", sub: "50 Halloween Coloring Pages for Kids Ages 3 and Up", asin: "B0HH9WT713" } },
+      de: { titel: "Halloweenspa&szlig;", sub: "50 fr&ouml;hliche Ausmalbilder f&uuml;r Kinder ab 3 Jahren", asin: "B0HL3DWP82", etsy: "4595776777" },
+      en: { titel: "Happy Halloween", sub: "50 Halloween Coloring Pages for Kids Ages 3 and Up", asin: "B0HH9WT713", etsy: "4595801272" } },
     { id: "22-thanksgiving", farbe: "#A0522D",
-      de: { titel: "Erntedank mit Tieren", sub: "50 Ausmalbilder zum Erntedankfest f&uuml;r Kinder ab 3 Jahren", asin: "B0HK4PV223" },
-      en: { titel: "Happy Thanksgiving", sub: "50 Thanksgiving Coloring Pages for Kids Ages 3 and Up", asin: "B0HGRZNQ94" } },
+      de: { titel: "Erntedank mit Tieren", sub: "50 Ausmalbilder zum Erntedankfest f&uuml;r Kinder ab 3 Jahren", asin: "B0HK4PV223", etsy: "4595780813" },
+      en: { titel: "Happy Thanksgiving", sub: "50 Thanksgiving Coloring Pages for Kids Ages 3 and Up", asin: "B0HGRZNQ94", etsy: "4595803084" } },
     { id: "23-nikolaus", farbe: "#8B2635",
-      de: { titel: "Nikolaus kommt", sub: "50 Ausmalbilder rund um den Nikolaustag ab 3 Jahren", asin: "B0HJFJ85F9" },
-      en: { titel: "Here Comes St. Nicholas", sub: "50 Christmas Coloring Pages for Kids Ages 3 and Up", asin: "B0HJFJPFLW" } },
+      de: { titel: "Nikolaus kommt", sub: "50 Ausmalbilder rund um den Nikolaustag ab 3 Jahren", asin: "B0HJFJ85F9", etsy: "4595782227" },
+      en: { titel: "Here Comes St. Nicholas", sub: "50 Christmas Coloring Pages for Kids Ages 3 and Up", asin: "B0HJFJPFLW", etsy: "4595804338" } },
     { id: "25-silvester", farbe: "#D4A017",
-      de: { titel: "Silvester Feuerwerk", sub: "50 Ausmalbilder zum Jahreswechsel f&uuml;r Kinder ab 3 Jahren", asin: "B0HK4TF447" },
-      en: { titel: "New Year's Eve Sparkle", sub: "50 New Year Coloring Pages for Kids Ages 3 and Up", asin: "B0HK4Q37XY" } },
+      de: { titel: "Silvester Feuerwerk", sub: "50 Ausmalbilder zum Jahreswechsel f&uuml;r Kinder ab 3 Jahren", asin: "B0HK4TF447", etsy: "4595785357" },
+      en: { titel: "New Year's Eve Sparkle", sub: "50 New Year Coloring Pages for Kids Ages 3 and Up", asin: "B0HK4Q37XY", etsy: "4595786257" } },
     { id: "05-unterwasser-deluxe", farbe: "#0E6E8E",
-      de: { titel: "Unterwasserwelt Deluxe", sub: "100 Ausmalbilder aus dem Meer f&uuml;r Kinder ab 3 Jahren", asin: "B0HK4M23QJ" },
-      en: { titel: "Under the Sea Deluxe", sub: "100 Ocean Coloring Pages for Kids Ages 3 and up", asin: "B0HK4PQG51" } },
+      de: { titel: "Unterwasserwelt Deluxe", sub: "100 Ausmalbilder aus dem Meer f&uuml;r Kinder ab 3 Jahren", asin: "B0HK4M23QJ", etsy: "4595838940" },
+      en: { titel: "Under the Sea Deluxe", sub: "100 Ocean Coloring Pages for Kids Ages 3 and up", asin: "B0HK4PQG51", etsy: "4595818179" } },
     { id: "11-pferde", farbe: "#8B5E3C",
-      de: { titel: "Pferde und Ponys", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: "B0HKK12CJY" },
-      en: { titel: "Horses and Ponies", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: "B0HLLN22XT" } },
+      de: { titel: "Pferde und Ponys", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: "B0HKK12CJY", etsy: "4595840642" },
+      en: { titel: "Horses and Ponies", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: "B0HLLN22XT", etsy: "4595819803" } },
     { id: "12-mandalas", farbe: "#7B4FA3",
-      de: { titel: "Tier-Mandalas", sub: "50 Mandalas mit Tieren f&#252;r Kinder von 6 bis 10 Jahren", asin: null },
-      en: { titel: "Animal Mandalas", sub: "50 Animal Mandalas for Kids Ages 6 to 10", asin: "B0HL9R84YQ" } },
+      de: { titel: "Tier-Mandalas", sub: "50 Mandalas mit Tieren f&#252;r Kinder von 6 bis 10 Jahren", asin: null, etsy: "4595842046" },
+      en: { titel: "Animal Mandalas", sub: "50 Animal Mandalas for Kids Ages 6 to 10", asin: "B0HL9R84YQ", etsy: "4595842798" } },
     { id: "13-wildtiere", farbe: "#C77D1A",
-      de: { titel: "Wilde Tiere der Welt", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null },
-      en: { titel: "Wild Animals of the World", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null } },
+      de: { titel: "Wilde Tiere der Welt", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null, etsy: "4595822177" },
+      en: { titel: "Wild Animals of the World", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null, etsy: "4595822911" } },
     { id: "14-meer", farbe: "#1F7A8C",
-      de: { titel: "Unterwasserwelt", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null },
-      en: { titel: "Under the Sea", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null } },
+      de: { titel: "Unterwasserwelt", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null, etsy: "4595823707" },
+      en: { titel: "Under the Sea", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null, etsy: "4595846436" } },
     { id: "15-dinosaurier", farbe: "#3D8B37",
-      de: { titel: "Dinosaurier", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: "B0HKJW9PSR" },
-      en: { titel: "Dinosaurs", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: "B0HKJVMMVR" } },
+      de: { titel: "Dinosaurier", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: "B0HKJW9PSR", etsy: "4595847152" },
+      en: { titel: "Dinosaurs", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: "B0HKJVMMVR", etsy: "4595826327" } },
     { id: "16-weltraum", farbe: "#3B4CCA",
-      de: { titel: "Weltraum und Planeten", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: "B0HKJXH29Q" },
-      en: { titel: "Space and Planets", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: "B0HKJRH6PN" } },
+      de: { titel: "Weltraum und Planeten", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: "B0HKJXH29Q", etsy: "4595848988" },
+      en: { titel: "Space and Planets", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: "B0HKJRH6PN", etsy: "4595849746" } },
     { id: "17-drachen", farbe: "#B5382F",
-      de: { titel: "Drachen und Fabelwesen", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: "B0HKJXDGRK" },
-      en: { titel: "Dragons and Mythical Creatures", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: "B0HKJTQFM7" } },
+      de: { titel: "Drachen und Fabelwesen", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: "B0HKJXDGRK", etsy: "4595828877" },
+      en: { titel: "Dragons and Mythical Creatures", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: "B0HKJTQFM7", etsy: "4595829797" } },
     { id: "18-maschinen", farbe: "#4A5568",
-      de: { titel: "Autos und Maschinen", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null },
-      en: { titel: "Cars and Machines", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null } },
+      de: { titel: "Autos und Maschinen", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null, etsy: "4595852140" },
+      en: { titel: "Cars and Machines", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null, etsy: "4595831287" } },
     { id: "19-voegel", farbe: "#2A9D8F",
-      de: { titel: "V&#246;gel der Welt", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null },
-      en: { titel: "Birds of the World", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null } },
+      de: { titel: "V&#246;gel der Welt", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null, etsy: "4595832163" },
+      en: { titel: "Birds of the World", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null, etsy: "4595832969" } },
     { id: "20-ritter", farbe: "#6B5B95",
-      de: { titel: "Ritter und Burgen", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null },
-      en: { titel: "Knights and Castles", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null } },
+      de: { titel: "Ritter und Burgen", sub: "50 Ausmalbilder f&#252;r Kinder von 6 bis 10 Jahren", asin: null, etsy: "4595855480" },
+      en: { titel: "Knights and Castles", sub: "50 Coloring Pages for Kids Ages 6 to 10", asin: null, etsy: "4595835097" } },
     // Raetselbuecher: typ steuert Altersfilter (Labyrinth 3-6, Wortsuche 6-10) und blendet den Malbuch-Bonus aus.
     // asin erst nach dem Amazon-Livegang eintragen, solange null bleibt die Karte unsichtbar.
     { id: "30-labyrinth-dschungel", farbe: "#3E8E5A", typ: "labyrinth",
-      de: { titel: "Dschungel Labyrinthe", sub: "Labyrinthe im Dschungel f&uuml;r Kinder ab 4 Jahren", asin: null },
-      en: { titel: "Jungle Mazes", sub: "Jungle Mazes for Kids Ages 4 to 8", asin: null } },
+      de: { titel: "Dschungel Labyrinthe", sub: "Labyrinthe im Dschungel f&uuml;r Kinder ab 4 Jahren", asin: null, etsy: "4595857590" },
+      en: { titel: "Jungle Mazes", sub: "Jungle Mazes for Kids Ages 4 to 8", asin: null, etsy: "4595858334" } },
     { id: "31-labyrinth-dino", farbe: "#BC4B26", typ: "labyrinth",
-      de: { titel: "Dinosaurier Labyrinthe", sub: "Labyrinthe mit Dinosauriern f&uuml;r Kinder ab 4 Jahren", asin: null },
-      en: { titel: "Dinosaur Mazes", sub: "Dinosaur Mazes for Kids Ages 4 to 8", asin: null } },
+      de: { titel: "Dinosaurier Labyrinthe", sub: "Labyrinthe mit Dinosauriern f&uuml;r Kinder ab 4 Jahren", asin: null, etsy: "4595837447" },
+      en: { titel: "Dinosaur Mazes", sub: "Dinosaur Mazes for Kids Ages 4 to 8", asin: null, etsy: "4595860024" } },
     { id: "32-labyrinth-weltraum", farbe: "#3B5BA5", typ: "labyrinth",
-      de: { titel: "Weltraum Labyrinthe", sub: "Labyrinthe im Weltraum f&uuml;r Kinder ab 4 Jahren", asin: null },
-      en: { titel: "Space Mazes", sub: "Space Mazes for Kids Ages 4 to 8", asin: null } },
+      de: { titel: "Weltraum Labyrinthe", sub: "Labyrinthe im Weltraum f&uuml;r Kinder ab 4 Jahren", asin: null, etsy: "4595839143" },
+      en: { titel: "Space Mazes", sub: "Space Mazes for Kids Ages 4 to 8", asin: null, etsy: "4595861538" } },
     { id: "33-labyrinth-meer", farbe: "#1F7A8C", typ: "labyrinth",
-      de: { titel: "Meer Labyrinthe", sub: "Labyrinthe unter Wasser f&uuml;r Kinder ab 4 Jahren", asin: null },
-      en: { titel: "Ocean Mazes", sub: "Ocean Mazes for Kids Ages 4 to 8", asin: null } },
+      de: { titel: "Meer Labyrinthe", sub: "Labyrinthe unter Wasser f&uuml;r Kinder ab 4 Jahren", asin: null, etsy: "4595840749" },
+      en: { titel: "Ocean Mazes", sub: "Ocean Mazes for Kids Ages 4 to 8", asin: null, etsy: "4595841557" } },
     { id: "34-labyrinth-einhorn", farbe: "#A8478F", typ: "labyrinth",
-      de: { titel: "Einhorn Labyrinthe", sub: "Labyrinthe mit Einh&ouml;rnern f&uuml;r Kinder ab 4 Jahren", asin: null },
-      en: { titel: "Unicorn Mazes", sub: "Unicorn Mazes for Kids Ages 4 to 8", asin: null } },
+      de: { titel: "Einhorn Labyrinthe", sub: "Labyrinthe mit Einh&ouml;rnern f&uuml;r Kinder ab 4 Jahren", asin: null, etsy: "4595863968" },
+      en: { titel: "Unicorn Mazes", sub: "Unicorn Mazes for Kids Ages 4 to 8", asin: null, etsy: "4595843171" } },
     { id: "40-wortsuche-dschungel", farbe: "#3E8E5A", typ: "wortsuche",
-      de: { titel: "Dschungel Wortsuche", sub: "Wortsuchr&auml;tsel f&uuml;r Kinder ab 6 Jahren", asin: null },
-      en: { titel: "Jungle Word Search", sub: "Word Search Puzzles for Kids Ages 6 to 10", asin: null } },
+      de: { titel: "Dschungel Wortsuche", sub: "Wortsuchr&auml;tsel f&uuml;r Kinder ab 6 Jahren", asin: null, etsy: "4595843969" },
+      en: { titel: "Jungle Word Search", sub: "Word Search Puzzles for Kids Ages 6 to 10", asin: null, etsy: "4595867184" } },
     { id: "41-wortsuche-dino", farbe: "#BC4B26", typ: "wortsuche",
-      de: { titel: "Dinosaurier Wortsuche", sub: "80 Wortsuchr&auml;tsel in 3 Stufen f&uuml;r Kinder ab 6 Jahren", asin: "B0HMRJ8XZP" },
-      en: { titel: "Dinosaur Word Search", sub: "80 Word Search Puzzles in 3 Levels for Kids Ages 6 to 10", asin: "B0HMRS21D2" } },
+      de: { titel: "Dinosaurier Wortsuche", sub: "80 Wortsuchr&auml;tsel in 3 Stufen f&uuml;r Kinder ab 6 Jahren", asin: "B0HMRJ8XZP", etsy: "4595868152" },
+      en: { titel: "Dinosaur Word Search", sub: "80 Word Search Puzzles in 3 Levels for Kids Ages 6 to 10", asin: "B0HMRS21D2", etsy: "4595847371" } },
     { id: "42-wortsuche-weltraum", farbe: "#3B5BA5", typ: "wortsuche",
-      de: { titel: "Weltraum Wortsuche", sub: "Wortsuchr&auml;tsel f&uuml;r Kinder ab 6 Jahren", asin: null },
-      en: { titel: "Space Word Search", sub: "Word Search Puzzles for Kids Ages 6 to 10", asin: null } },
+      de: { titel: "Weltraum Wortsuche", sub: "Wortsuchr&auml;tsel f&uuml;r Kinder ab 6 Jahren", asin: null, etsy: "4595848223" },
+      en: { titel: "Space Word Search", sub: "Word Search Puzzles for Kids Ages 6 to 10", asin: null, etsy: "4595849109" } },
     { id: "43-wortsuche-meer", farbe: "#1F7A8C", typ: "wortsuche",
-      de: { titel: "Meer Wortsuche", sub: "Wortsuchr&auml;tsel f&uuml;r Kinder ab 6 Jahren", asin: null },
-      en: { titel: "Ocean Word Search", sub: "Word Search Puzzles for Kids Ages 6 to 10", asin: null } },
+      de: { titel: "Meer Wortsuche", sub: "Wortsuchr&auml;tsel f&uuml;r Kinder ab 6 Jahren", asin: null, etsy: "4595850021" },
+      en: { titel: "Ocean Word Search", sub: "Word Search Puzzles for Kids Ages 6 to 10", asin: null, etsy: "4595850927" } },
     { id: "44-wortsuche-weihnachten", farbe: "#B23A48", typ: "wortsuche",
-      de: { titel: "Weihnachtsr&auml;tsel Wortsuche", sub: "80 Wortsuchr&auml;tsel zu Weihnachten f&uuml;r Kinder ab 6 Jahren", asin: "B0HLY43KDL" },
-      en: { titel: "Christmas Word Search", sub: "80 Holiday Word Search Puzzles for Kids Ages 6 to 10", asin: "B0HLYCR2JJ" } },
+      de: { titel: "Weihnachtsr&auml;tsel Wortsuche", sub: "80 Wortsuchr&auml;tsel zu Weihnachten f&uuml;r Kinder ab 6 Jahren", asin: "B0HLY43KDL", etsy: "4595787167" },
+      en: { titel: "Christmas Word Search", sub: "80 Holiday Word Search Puzzles for Kids Ages 6 to 10", asin: "B0HLYCR2JJ", etsy: "4595809816" } },
   ];
 
   const TEXTE = {
@@ -696,7 +711,7 @@
       eyebrowBooks: "Die Reihe",
       booksH2: "Mal- und R&auml;tselb&uuml;cher f&uuml;r kleine H&auml;nde",
       bio: "Ich habe drei Kinder und suchte am Nachmittag nach fünf ruhigen Minuten. Ausmalbücher sollten dabei helfen, aber die meisten waren entweder zu kindisch oder zu kompliziert, viele gefielen mir einfach nicht…<br><br>Also habe ich angefangen, eigene zu machen. Erst für die Kleineren mit dicken Linien, großen Bildern, ein Motiv pro Seite. Dann noch etwas für die Ältere, die schon sauer war, weil sie ihre eigenen wollte…<br>Wenn meine drei dann über ihren Bildern hängen, hat sich das gelohnt. Aus dem ersten Buch für zuhause ist schnell eine ganze Reihe geworden, und es kommen noch mehr. Gleichzeitig entstanden die ersten Bücher für die Ältere. So wie es aussieht, kommen da immer weitere dazu…",
-      booksP: "Ausmalbücher mit großen Motiven, dicken Linien und einem Bild pro Seite, dazu Wortsuchrätsel in drei Stufen. Für Kinder von 3 bis 10 Jahren. Alle Bücher gibt es als Taschenbuch bei Amazon.",
+      booksP: "Ausmalbücher mit großen Motiven, dicken Linien und einem Bild pro Seite, dazu Wortsuchrätsel in drei Stufen. Für Kinder von 3 bis 10 Jahren. Viele Titel gibt es als Taschenbuch bei Amazon, alle auch als PDF zum sofort Ausdrucken bei Etsy.",
       filterLabel: "Nach Alter filtern",
       filterAlle: "Alle",
       filter36: "3 bis 6 Jahre",
@@ -705,6 +720,7 @@
       detailBonus: "Fünf Bonus-Bilder gratis holen",
       detailClose: "Schließen",
       shopButton: (dom) => "Auf Amazon ansehen",
+      etsyButton: "Als PDF zum Ausdrucken auf Etsy",
       otherShops: "",
       bonusEyebrow: "Gratis",
       bonusH2: "Fünf Bonus-Ausmalbilder zum Mitnehmen",
@@ -721,7 +737,7 @@
       privacyH2: "Datenschutz",
       privacyP1: 'Diese Seite setzt keine Cookies oder Tracking-Skripte ein. Die vollst&auml;ndige <a href="/datenschutz">Datenschutzerkl&auml;rung</a> findest du hier.',
       privacyP2: "Die zu dieser Marke geh&ouml;rende Pinterest-App ver&ouml;ffentlicht ausschlie&szlig;lich Inhalte auf dem eigenen Pinterest-Konto von M. von Wedelstaedt. Sie greift auf keine Pins, Pinnw&auml;nde oder Daten anderer Pinterest-Nutzer:innen zu und wird nicht f&uuml;r andere Personen oder Unternehmen betrieben.",
-      privacyP3: "Links zu Buchtiteln f&uuml;hren zu amazon.de bzw. amazon.com. Dort gilt jeweils die Datenschutzerkl&auml;rung von Amazon.",
+      privacyP3: "Links zu Buchtiteln f&uuml;hren zu amazon.de bzw. amazon.com und zu etsy.com. Dort gilt jeweils die Datenschutzerkl&auml;rung von Amazon bzw. Etsy.",
       impressum: "Impressum",
       datenschutz: "Datenschutz",
       amazonDomain: "amazon.de",
@@ -732,7 +748,7 @@
       eyebrowBooks: "The Series",
       booksH2: "Coloring and Puzzle Books for Little Hands",
       bio: "I have three kids, and in the afternoon I was looking for five quiet minutes. Coloring books were supposed to help, but most were either too babyish or too complicated, and plenty of them I just didn't like…<br><br>So I started making my own. First for the little ones, with thick lines, big pictures, one picture per page. Then something for my oldest, who was already annoyed because she wanted her own…<br>When my three are bent over their pictures, it's all worth it. What began as a first book for home quickly turned into a whole series, and more are coming. At the same time the first books for my oldest came along. The way it looks, more will keep joining…",
-      booksP: "Coloring books with big pictures, thick lines and one picture per page, plus word search puzzles in three levels. For kids ages 3 to 10. All books are available as paperback on Amazon.",
+      booksP: "Coloring books with big pictures, thick lines and one picture per page, plus word search puzzles in three levels. For kids ages 3 to 10. Many titles are available as paperback on Amazon, and all of them as a printable PDF on Etsy.",
       filterLabel: "Filter by age",
       filterAlle: "All",
       filter36: "Ages 3 to 6",
@@ -741,6 +757,7 @@
       detailBonus: "Get five free bonus pages",
       detailClose: "Close",
       shopButton: (dom) => "View on amazon." + dom,
+      etsyButton: "Printable PDF on Etsy",
       otherShops: "Other Amazon stores:",
       bonusEyebrow: "Free",
       bonusH2: "Five free bonus coloring pages",
@@ -757,7 +774,7 @@
       privacyH2: "Privacy",
       privacyP1: 'This site does not use cookies or tracking scripts. You can find the full <a href="/datenschutz">privacy policy</a> (German) here.',
       privacyP2: "The Pinterest app associated with this brand only publishes content on M. von Wedelstaedt's own Pinterest account. It does not access any pins, boards or data of other Pinterest users, and is not operated on behalf of other people or companies.",
-      privacyP3: "Links to book titles lead to amazon.de or amazon.com. Amazon's own privacy policy applies there.",
+      privacyP3: "Links to book titles lead to amazon.de or amazon.com and to etsy.com. The privacy policy of Amazon or Etsy applies there.",
       impressum: "Impressum",
       datenschutz: "Privacy",
       amazonDomain: "amazon.com",
@@ -769,6 +786,8 @@
   const t = TEXTE[sprache];
   // Echte Amazon-Cover je Sprache (EN-Cover tragen den englischen Titel)
   const coverPfad = (id) => `/covers/${id}${sprache === "en" ? "-en" : ""}.jpg`;
+  // Titellose Motiv-Cover (Etsy-PDFs ohne englisches Amazon-Cover) laufen ueber die deutsche Datei
+  function coverFallback(img) { img.onerror = null; img.src = img.src.replace(/-en\.jpg$/, ".jpg"); }
 
   document.documentElement.lang = t.htmlLang;
   document.getElementById("t-eyebrow-hero").innerHTML = t.eyebrowHero;
@@ -794,7 +813,7 @@
 
   for (const buch of BUECHER) {
     const eintrag = buch[sprache];
-    if (!eintrag.asin) continue; // in dieser Sprache noch nicht erhaeltlich
+    if (!eintrag.asin && !eintrag.etsy) continue; // weder Taschenbuch noch Etsy-PDF in dieser Sprache
     const kachel = document.createElement("button");
     kachel.type = "button";
     kachel.className = "tile";
@@ -802,7 +821,7 @@
     kachel.setAttribute("aria-haspopup", "dialog");
     kachel.innerHTML = `
       <span class="tile-top" style="background:${buch.farbe}"></span>
-      <img class="tile-img" src="${coverPfad(buch.id)}" alt="${eintrag.titel} &mdash; Cover" loading="lazy">
+      <img class="tile-img" src="${coverPfad(buch.id)}" alt="${eintrag.titel} &mdash; Cover" loading="lazy" onerror="coverFallback(this)">
       <span class="tile-title" style="color:${buch.farbe}">${eintrag.titel}</span>`;
     kachel.addEventListener("click", () => detailOeffnen(buch.id));
     grid.appendChild(kachel);
@@ -856,9 +875,10 @@
   // ---------- Detailansicht (Link auf ein einzelnes Buch: /#<buch-id>) ----------
   function detailOeffnen(id) {
     const buch = BUECHER.find((b) => b.id === id);
-    if (!buch || !buch[sprache].asin) return;
+    if (!buch || (!buch[sprache].asin && !buch[sprache].etsy)) return;
     const eintrag = buch[sprache];
     const detailImg = document.getElementById("detail-img");
+    detailImg.onerror = () => coverFallback(detailImg);
     detailImg.src = coverPfad(id);
     detailImg.alt = `${eintrag.titel} — Cover`;
     const titel = document.getElementById("detail-title");
@@ -867,11 +887,20 @@
     document.getElementById("detail-sub").innerHTML = eintrag.sub;
     const shop = amazonShop();
     const amazon = document.getElementById("detail-amazon");
-    amazon.href = `https://www.amazon.${shop}/dp/${eintrag.asin}`;
-    amazon.innerHTML = `${t.shopButton(shop)} &rarr;`;
+    amazon.hidden = !eintrag.asin;
+    if (eintrag.asin) {
+      amazon.href = `https://www.amazon.${shop}/dp/${eintrag.asin}`;
+      amazon.innerHTML = `${t.shopButton(shop)} &rarr;`;
+    }
+    const etsy = document.getElementById("detail-etsy");
+    etsy.hidden = !eintrag.etsy;
+    if (eintrag.etsy) {
+      etsy.href = `https://www.etsy.com/listing/${eintrag.etsy}`;
+      etsy.innerHTML = `${t.etsyButton} &rarr;`;
+    }
     const shops = document.getElementById("detail-shops");
     shops.replaceChildren();
-    if (sprache === "en") {
+    if (sprache === "en" && eintrag.asin) {
       shops.append(t.otherShops + " ");
       for (const dom of ["com", "co.uk", "ca", "com.au", "ie"]) {
         if (dom === shop) continue;
