@@ -63,7 +63,13 @@
         { "@type": "Book", "position": 19, "name": "Weihnachtsrätsel Wortsuche", "author": "M. von Wedelstaedt", "bookFormat": "https://schema.org/Paperback", "url": "https://www.amazon.de/dp/B0HLY43KDL", "image": "https://mvonwedelstaedt.com/covers/44-wortsuche-weihnachten.jpg" },
         { "@type": "Book", "position": 20, "name": "Dinosaurier Wortsuche", "author": "M. von Wedelstaedt", "bookFormat": "https://schema.org/Paperback", "url": "https://www.amazon.de/dp/B0HMRJ8XZP", "image": "https://mvonwedelstaedt.com/covers/41-wortsuche-dino.jpg" }
       ]
-    }
+    },
+    {"@type": "Product", "name": "Malbuch-Paket 3-6 Jahre: 10 Bände Tiere, Meer, Dino, Fahrzeuge", "image": "https://mvonwedelstaedt.com/pakete/staffel1_de.jpg", "brand": {"@type": "Brand", "name": "M. von Wedelstaedt"}, "offers": {"@type": "Offer", "url": "https://www.etsy.com/listing/4596275041", "priceCurrency": "EUR", "price": "19.99", "availability": "https://schema.org/InStock"}},
+    {"@type": "Product", "name": "Malbuch-Paket Jahreszeiten: Halloween, Erntedank, Nikolaus, Weihnachten, Silvester", "image": "https://mvonwedelstaedt.com/pakete/jahreszeiten_de.jpg", "brand": {"@type": "Brand", "name": "M. von Wedelstaedt"}, "offers": {"@type": "Offer", "url": "https://www.etsy.com/listing/4596278753", "priceCurrency": "EUR", "price": "12.99", "availability": "https://schema.org/InStock"}},
+    {"@type": "Product", "name": "Malbuch-Paket 6-10 Jahre: 10 Bände Pferde, Mandalas, Drachen, Weltraum, Ritter", "image": "https://mvonwedelstaedt.com/pakete/staffel2_de.jpg", "brand": {"@type": "Brand", "name": "M. von Wedelstaedt"}, "offers": {"@type": "Offer", "url": "https://www.etsy.com/listing/4596281499", "priceCurrency": "EUR", "price": "24.99", "availability": "https://schema.org/InStock"}},
+    {"@type": "Product", "name": "Labyrinth-Paket: 300 Labyrinthe zum Ausdrucken, 5 Themen", "image": "https://mvonwedelstaedt.com/pakete/labyrinth_de.jpg", "brand": {"@type": "Brand", "name": "M. von Wedelstaedt"}, "offers": {"@type": "Offer", "url": "https://www.etsy.com/listing/4596284077", "priceCurrency": "EUR", "price": "19.99", "availability": "https://schema.org/InStock"}},
+    {"@type": "Product", "name": "Wortsuche-Paket: 400 Wortsuchrätsel zum Ausdrucken, 5 Themen", "image": "https://mvonwedelstaedt.com/pakete/wortsuche_de.jpg", "brand": {"@type": "Brand", "name": "M. von Wedelstaedt"}, "offers": {"@type": "Offer", "url": "https://www.etsy.com/listing/4596286967", "priceCurrency": "EUR", "price": "24.99", "availability": "https://schema.org/InStock"}},
+    {"@type": "Product", "name": "Alles-Paket: 25 Malbücher und 10 Rätselbücher zum Ausdrucken", "image": "https://mvonwedelstaedt.com/pakete/alles_de.jpg", "brand": {"@type": "Brand", "name": "M. von Wedelstaedt"}, "offers": {"@type": "Offer", "url": "https://www.etsy.com/listing/4596309176", "priceCurrency": "EUR", "price": "59.99", "availability": "https://schema.org/InStock"}}
   ]
 }
 </script>
@@ -411,6 +417,37 @@
     .tile-title { font-size: 0.78rem; padding: 6px 4px 8px; }
   }
 
+  /* ---------- Pakete ---------- */
+  .bundles { padding: 8px 24px 96px; max-width: 1160px; margin: 0 auto; }
+  .bundles-head { text-align: center; max-width: 640px; margin: 0 auto 44px; }
+  .bundles-head .eyebrow { color: var(--gold); }
+  .bundles-head h2 { font-size: clamp(1.9rem, 3.8vw, 2.5rem); margin-bottom: 14px; }
+  .bundles-head p { color: var(--ink-soft); font-size: 1.02rem; line-height: 1.65; margin: 0; }
+  .bundle-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
+  .bundle { background: var(--surface); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; }
+  .bundle-top { height: 4px; display: block; }
+  .bundle img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--surface-2); }
+  .bundle-body { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .bundle h3 { font-family: "Baloo 2", "Source Serif 4", serif; font-weight: 700; font-size: 1.05rem; line-height: 1.25; margin: 0; }
+  .bundle-meta { color: var(--ink-soft); font-size: 0.88rem; margin: 0; }
+  .bundle-price { font-size: 0.95rem; margin: 0; font-variant-numeric: tabular-nums; }
+  .bundle-price s { color: var(--ink-soft); margin-left: 4px; }
+  .bundle-badge { display: inline-block; font-size: 0.78rem; font-weight: 700; padding: 3px 9px; border-radius: 999px; background: var(--surface-2); margin-left: 8px; }
+  .bundle-buttons { margin-top: auto; padding-top: 10px; display: flex; flex-wrap: wrap; gap: 10px; }
+  .bundle-btn { display: inline-block; padding: 11px 18px; border: 2px solid var(--ink); color: var(--ink); border-radius: 10px; font-weight: 700; font-size: 0.92rem; }
+  .bundle-btn:hover { text-decoration: none; background: var(--surface-2); }
+  .xmas { margin-top: 56px; display: grid; grid-template-columns: minmax(0, 250px) minmax(0, 1fr); gap: 32px; align-items: center; background: var(--surface-2); border: 1px solid var(--rule); border-radius: 18px; padding: 28px; }
+  .xmas video { width: 100%; height: auto; aspect-ratio: 2 / 3; border-radius: 12px; background: var(--surface); object-fit: cover; display: block; }
+  .xmas .eyebrow { color: var(--gold); margin-bottom: 12px; }
+  .xmas h3 { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 0 0 12px; text-wrap: balance; }
+  .xmas p { color: var(--ink-soft); line-height: 1.65; margin: 0 0 20px; }
+  @media (max-width: 620px) {
+    .bundles { padding: 8px 16px 72px; }
+    .bundle-grid { grid-template-columns: minmax(0, 1fr); }
+    .xmas { grid-template-columns: minmax(0, 1fr); padding: 22px 20px; }
+    .xmas video { max-width: 250px; margin: 0 auto; }
+  }
+
   /* ---------- Bonus signup ---------- */
   .bonus {
     max-width: 720px;
@@ -533,6 +570,24 @@
     <span class="filter-count" id="filter-count" aria-live="polite"></span>
   </div>
   <div class="grid" id="grid"></div>
+</section>
+
+<section class="bundles" id="pakete">
+  <div class="bundles-head">
+    <p class="eyebrow" id="t-bundles-eyebrow">Pakete</p>
+    <h2 id="t-bundles-h2"></h2>
+    <p id="t-bundles-p"></p>
+  </div>
+  <div class="bundle-grid" id="bundle-grid"></div>
+  <div class="xmas" id="xmas">
+    <video id="xmas-video" muted loop playsinline controls preload="none" width="250" height="375"></video>
+    <div>
+      <p class="eyebrow" id="t-xmas-eyebrow"></p>
+      <h3 id="t-xmas-h3"></h3>
+      <p id="t-xmas-p"></p>
+      <a class="bundle-btn" id="xmas-btn" target="_blank" rel="noopener"></a>
+    </div>
+  </div>
 </section>
 
 <dialog id="detail" aria-labelledby="detail-title">
@@ -741,6 +796,18 @@
       impressum: "Impressum",
       datenschutz: "Datenschutz",
       amazonDomain: "amazon.de",
+      bundlesEyebrow: "Pakete zum Ausdrucken",
+      bundlesH2: "Mehrere Bücher auf einmal, bis zu 69 % günstiger",
+      bundlesP: "Die Pakete gibt es als PDF-Download bei Etsy. Sofort nach dem Kauf bereit, ausdrucken so oft du willst, für den privaten Gebrauch und die Schule. Der Preisvorteil gilt gegenüber dem Einzelkauf der Bücher im Shop.",
+      bundleBooks: (n, s) => n + " Bücher · " + s + " Seiten",
+      bundleSave: (p) => "Spare " + p + " %",
+      bundlePrice: (preis, summe) => ["Paket " + preis.toFixed(2).replace(".", ",") + " €", "statt " + summe.toFixed(2).replace(".", ",") + " €"],
+      bundleEtsy: "Auf Etsy ansehen",
+      bundleEtsyFmt: (f) => "Auf Etsy ansehen (" + f + ")",
+      xmasEyebrow: "Weihnachten",
+      xmasH3: "Weihnachtsmalbücher zum Sofort-Ausdrucken",
+      xmasP: "Fünf Bücher von Halloween über Nikolaus und Weihnachten bis Silvester, als PDF in A4 und US Letter. Passend für den Advent und für Regentage.",
+      xmasBtn: "Jahreszeiten-Paket auf Etsy",
     },
     en: {
       htmlLang: "en",
@@ -778,6 +845,18 @@
       impressum: "Impressum",
       datenschutz: "Privacy",
       amazonDomain: "amazon.com",
+      bundlesEyebrow: "Printable bundles",
+      bundlesH2: "Several books at once, up to 69% cheaper",
+      bundlesP: "The bundles are PDF downloads on Etsy. Ready right after purchase, print as often as you like, for private use and school. The saving compares with buying the books one by one in the shop.",
+      bundleBooks: (n, s) => n + " books · " + s + " pages",
+      bundleSave: (p) => "Save " + p + "%",
+      bundlePrice: (preis, summe) => ["Bundle €" + preis.toFixed(2), "instead of €" + summe.toFixed(2)],
+      bundleEtsy: "View on Etsy",
+      bundleEtsyFmt: (f) => "View on Etsy (" + f + ")",
+      xmasEyebrow: "Christmas",
+      xmasH3: "Christmas coloring books to print right away",
+      xmasP: "Five books from Halloween through St. Nicholas and Christmas to New Year, as PDF in A4 and US Letter. Made for advent and rainy days.",
+      xmasBtn: "Seasonal bundle on Etsy",
     },
   };
 
@@ -854,6 +933,205 @@
     if (chip) filterAnwenden(chip.dataset.alter);
   });
   filterAnwenden("alle");
+
+  // ---------- Pakete ----------
+  const PAKETE = [
+  {
+    "id": "staffel1",
+    "farbe": "#2E7D6B",
+    "anzahl": 10,
+    "seiten": 550,
+    "preis": 19.99,
+    "summe": 52.89,
+    "spar": 62,
+    "de": "Malbuch-Paket 3-6 Jahre: 10 Bände Tiere, Meer, Dino, Fahrzeuge",
+    "en": "Coloring Book Bundle Ages 3-6: 10 Books Animals, Ocean, Dinos, Vehicles",
+    "etsy": {
+      "de": [
+        [
+          null,
+          "4596275041"
+        ]
+      ],
+      "en": [
+        [
+          null,
+          "4596296726"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "jahreszeiten",
+    "farbe": "#B5481F",
+    "anzahl": 5,
+    "seiten": 250,
+    "preis": 12.99,
+    "summe": 24.95,
+    "spar": 48,
+    "de": "Malbuch-Paket Jahreszeiten: Halloween, Erntedank, Nikolaus, Weihnachten, Silvester",
+    "en": "Seasonal Coloring Bundle: Halloween, Thanksgiving, St. Nicholas, Christmas, New Year",
+    "etsy": {
+      "de": [
+        [
+          null,
+          "4596278753"
+        ]
+      ],
+      "en": [
+        [
+          null,
+          "4596279947"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "staffel2",
+    "farbe": "#3B5BA5",
+    "anzahl": 10,
+    "seiten": 500,
+    "preis": 24.99,
+    "summe": 49.9,
+    "spar": 50,
+    "de": "Malbuch-Paket 6-10 Jahre: 10 Bände Pferde, Mandalas, Drachen, Weltraum, Ritter",
+    "en": "Coloring Book Bundle Ages 6-10: 10 Books Horses, Mandalas, Dragons, Space, Knights",
+    "etsy": {
+      "de": [
+        [
+          null,
+          "4596281499"
+        ]
+      ],
+      "en": [
+        [
+          null,
+          "4596282785"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "labyrinth",
+    "farbe": "#1F7A8C",
+    "anzahl": 5,
+    "seiten": 450,
+    "preis": 19.99,
+    "summe": 29.95,
+    "spar": 33,
+    "de": "Labyrinth-Paket: 300 Labyrinthe zum Ausdrucken, 5 Themen",
+    "en": "Maze Bundle: 300 Printable Mazes, 5 Themes",
+    "etsy": {
+      "de": [
+        [
+          null,
+          "4596284077"
+        ]
+      ],
+      "en": [
+        [
+          null,
+          "4596285427"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "wortsuche",
+    "farbe": "#1F6F4A",
+    "anzahl": 5,
+    "seiten": 490,
+    "preis": 24.99,
+    "summe": 34.95,
+    "spar": 28,
+    "de": "Wortsuche-Paket: 400 Wortsuchrätsel zum Ausdrucken, 5 Themen",
+    "en": "Word Search Bundle: 400 Printable Puzzles, 5 Themes",
+    "etsy": {
+      "de": [
+        [
+          null,
+          "4596286967"
+        ]
+      ],
+      "en": [
+        [
+          null,
+          "4596307476"
+        ]
+      ]
+    }
+  },
+  {
+    "id": "alles",
+    "farbe": "#2A2622",
+    "anzahl": 35,
+    "seiten": 2240,
+    "preis": 59.99,
+    "summe": 192.64,
+    "spar": 69,
+    "de": "Alles-Paket: 25 Malbücher und 10 Rätselbücher zum Ausdrucken",
+    "en": "Complete Bundle: 25 Coloring Books and 10 Puzzle Books to Print",
+    "etsy": {
+      "de": [
+        [
+          "A4",
+          "4596309176"
+        ],
+        [
+          "US Letter",
+          "4596292761"
+        ]
+      ],
+      "en": [
+        [
+          "US Letter",
+          "4596313526"
+        ],
+        [
+          "A4",
+          "4596310766"
+        ]
+      ]
+    }
+  }
+];
+  document.getElementById("t-bundles-eyebrow").innerHTML = t.bundlesEyebrow;
+  document.getElementById("t-bundles-h2").innerHTML = t.bundlesH2;
+  document.getElementById("t-bundles-p").innerHTML = t.bundlesP;
+  const bundleGrid = document.getElementById("bundle-grid");
+  for (const p of PAKETE) {
+    const [preisZeile, summeZeile] = t.bundlePrice(p.preis, p.summe);
+    const knoepfe = p.etsy[sprache].map(([fmt, id]) =>
+      `<a class="bundle-btn" href="https://www.etsy.com/listing/${id}" target="_blank" rel="noopener">${fmt ? t.bundleEtsyFmt(fmt) : t.bundleEtsy}</a>`).join("");
+    const karte = document.createElement("article");
+    karte.className = "bundle";
+    karte.id = "paket-" + p.id;
+    karte.innerHTML = `
+      <span class="bundle-top" style="background:${p.farbe}"></span>
+      <img src="/pakete/${p.id}_${sprache}.jpg" alt="${p[sprache]}" width="960" height="540" loading="lazy">
+      <div class="bundle-body">
+        <h3 style="color:${p.farbe}">${p[sprache]}</h3>
+        <p class="bundle-meta">${t.bundleBooks(p.anzahl, p.seiten)}</p>
+        <p class="bundle-price"><strong>${preisZeile}</strong><s>${summeZeile}</s><span class="bundle-badge">${t.bundleSave(p.spar)}</span></p>
+        <div class="bundle-buttons">${knoepfe}</div>
+      </div>`;
+    bundleGrid.appendChild(karte);
+  }
+  document.getElementById("t-xmas-eyebrow").innerHTML = t.xmasEyebrow;
+  document.getElementById("t-xmas-h3").innerHTML = t.xmasH3;
+  document.getElementById("t-xmas-p").innerHTML = t.xmasP;
+  const xmasBtn = document.getElementById("xmas-btn");
+  xmasBtn.textContent = t.xmasBtn;
+  xmasBtn.href = "https://www.etsy.com/listing/" + PAKETE.find((x) => x.id === "jahreszeiten").etsy[sprache][0][1];
+  const xmasVideo = document.getElementById("xmas-video");
+  xmasVideo.poster = `/pakete/weihnachten_${sprache}_poster.jpg`;
+  xmasVideo.src = `/pakete/weihnachten_${sprache}.mp4`;
+  // Nur abspielen, wenn sichtbar und keine reduzierte Bewegung gewuenscht ist; Bedienelemente bleiben immer da.
+  if ("IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    new IntersectionObserver((eintraege) => {
+      for (const e of eintraege) { if (e.isIntersecting) xmasVideo.play().catch(() => {}); else xmasVideo.pause(); }
+    }, { threshold: 0.25 }).observe(xmasVideo);
+  }
 
   // Amazon-Shop des Besuchers. Die ASIN ist in allen Shops gleich (auf amazon.co.uk geprueft).
   // Deutsche Buecher: immer amazon.de (liefert auch nach AT und CH). Englische: nach Browser-Region,
