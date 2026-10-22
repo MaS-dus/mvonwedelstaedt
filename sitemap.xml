@@ -1,23 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mvonwedelstaedt.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/"/>
   </url>
   <url>
-    <loc>https://mvonwedelstaedt.com/?lang=en</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://mvonwedelstaedt.com/en/</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/ausmalbilder-weihnachten</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-weihnachten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/christmas-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-weihnachten"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/en/christmas-coloring-pages</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-weihnachten"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/christmas-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-weihnachten"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/ausmalbilder-nikolaus</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-nikolaus"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/st-nicholas-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-nikolaus"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/en/st-nicholas-coloring-pages</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-nikolaus"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/st-nicholas-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-nikolaus"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/ausmalbilder-silvester</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-silvester"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/new-year-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-silvester"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/en/new-year-coloring-pages</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-silvester"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/new-year-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-silvester"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/ausmalbilder-dinosaurier</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-dinosaurier"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/dinosaur-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-dinosaurier"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/en/dinosaur-coloring-pages</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-dinosaurier"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/dinosaur-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-dinosaurier"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/ausmalbilder-zum-ausdrucken</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-zum-ausdrucken"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/printable-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-zum-ausdrucken"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/en/printable-coloring-pages</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/ausmalbilder-zum-ausdrucken"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/printable-coloring-pages"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/ausmalbilder-zum-ausdrucken"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/woerter-suchen-kinder</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/woerter-suchen-kinder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/word-search-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/woerter-suchen-kinder"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/en/word-search-for-kids</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/woerter-suchen-kinder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/word-search-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/woerter-suchen-kinder"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/labyrinthe-kinder</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/labyrinthe-kinder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/mazes-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/labyrinthe-kinder"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/en/mazes-for-kids</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/labyrinthe-kinder"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/mazes-for-kids"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/labyrinthe-kinder"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/pakete</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/pakete"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/bundles"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/pakete"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/en/bundles</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/pakete"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/bundles"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/pakete"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/faq</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/faq"/>
+  </url>
+  <url>
+    <loc>https://mvonwedelstaedt.com/en/faq</loc>
+    <lastmod>2026-10-22</lastmod>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mvonwedelstaedt.com/faq"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mvonwedelstaedt.com/en/faq"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mvonwedelstaedt.com/faq"/>
   </url>
   <url>
     <loc>https://mvonwedelstaedt.com/impressum</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <lastmod>2026-10-22</lastmod>
   </url>
   <url>
     <loc>https://mvonwedelstaedt.com/datenschutz</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
+    <lastmod>2026-10-22</lastmod>
   </url>
 </urlset>

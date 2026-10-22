@@ -1,0 +1,160 @@
+[
+ {
+  "id": "staffel1",
+  "farbe": "#2E7D6B",
+  "anzahl": 10,
+  "seiten": 550,
+  "preis": 19.99,
+  "summe": 52.89,
+  "spar": 62,
+  "de": "Malbuch-Paket 3-6 Jahre: 10 Bände Tiere, Meer, Dino, Fahrzeuge",
+  "en": "Coloring Book Bundle Ages 3-6: 10 Books Animals, Ocean, Dinos, Vehicles",
+  "etsy": {
+   "de": [
+    [
+     null,
+     "4596275041"
+    ]
+   ],
+   "en": [
+    [
+     null,
+     "4596296726"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "jahreszeiten",
+  "farbe": "#B5481F",
+  "anzahl": 5,
+  "seiten": 250,
+  "preis": 12.99,
+  "summe": 24.95,
+  "spar": 48,
+  "de": "Malbuch-Paket Jahreszeiten: Halloween, Erntedank, Nikolaus, Weihnachten, Silvester",
+  "en": "Seasonal Coloring Bundle: Halloween, Thanksgiving, St. Nicholas, Christmas, New Year",
+  "etsy": {
+   "de": [
+    [
+     null,
+     "4596278753"
+    ]
+   ],
+   "en": [
+    [
+     null,
+     "4596279947"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "staffel2",
+  "farbe": "#3B5BA5",
+  "anzahl": 10,
+  "seiten": 500,
+  "preis": 24.99,
+  "summe": 49.9,
+  "spar": 50,
+  "de": "Malbuch-Paket 6-10 Jahre: 10 Bände Pferde, Mandalas, Drachen, Weltraum, Ritter",
+  "en": "Coloring Book Bundle Ages 6-10: 10 Books Horses, Mandalas, Dragons, Space, Knights",
+  "etsy": {
+   "de": [
+    [
+     null,
+     "4596281499"
+    ]
+   ],
+   "en": [
+    [
+     null,
+     "4596282785"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "labyrinth",
+  "farbe": "#1F7A8C",
+  "anzahl": 5,
+  "seiten": 450,
+  "preis": 19.99,
+  "summe": 29.95,
+  "spar": 33,
+  "de": "Labyrinth-Paket: 300 Labyrinthe zum Ausdrucken, 5 Themen",
+  "en": "Maze Bundle: 300 Printable Mazes, 5 Themes",
+  "etsy": {
+   "de": [
+    [
+     null,
+     "4596284077"
+    ]
+   ],
+   "en": [
+    [
+     null,
+     "4596285427"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "wortsuche",
+  "farbe": "#1F6F4A",
+  "anzahl": 5,
+  "seiten": 490,
+  "preis": 24.99,
+  "summe": 34.95,
+  "spar": 28,
+  "de": "Wortsuche-Paket: 400 Wortsuchrätsel zum Ausdrucken, 5 Themen",
+  "en": "Word Search Bundle: 400 Printable Puzzles, 5 Themes",
+  "etsy": {
+   "de": [
+    [
+     null,
+     "4596286967"
+    ]
+   ],
+   "en": [
+    [
+     null,
+     "4596307476"
+    ]
+   ]
+  }
+ },
+ {
+  "id": "alles",
+  "farbe": "#2A2622",
+  "anzahl": 35,
+  "seiten": 2240,
+  "preis": 59.99,
+  "summe": 192.64,
+  "spar": 69,
+  "de": "Alles-Paket: 25 Malbücher und 10 Rätselbücher zum Ausdrucken",
+  "en": "Complete Bundle: 25 Coloring Books and 10 Puzzle Books to Print",
+  "etsy": {
+   "de": [
+    [
+     "A4",
+     "4596309176"
+    ],
+    [
+     "US Letter",
+     "4596292761"
+    ]
+   ],
+   "en": [
+    [
+     "US Letter",
+     "4596313526"
+    ],
+    [
+     "A4",
+     "4596310766"
+    ]
+   ]
+  }
+ }
+]

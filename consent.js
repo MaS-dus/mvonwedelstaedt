@@ -39,14 +39,15 @@ window.ADS_CONVERSION_LABEL = ''; // z.B. 'AbCdEfGhIjK'
   if (vorhanden === 'abgelehnt') return;
 
   function banner() {
-    var sprache = (new URLSearchParams(location.search).get('lang') === 'en') ? 'en' : 'de';
+    // Sprache: html lang (/en/-Seiten), sonst Abfrageparameter (alte URL /?lang=en, QR-Seite /malbuch)
+    var sprache = (document.documentElement.lang === 'en' || new URLSearchParams(location.search).get('lang') === 'en') ? 'en' : 'de';
     var TXT = {
       de: {
-        text: 'Diese Seite nutzt optional Google Analytics, um zu verstehen, wie Besucher:innen die Seite finden. Du kannst zustimmen oder ablehnen — die Seite funktioniert in beiden Fällen gleich.',
+        text: 'Diese Seite nutzt optional Google Analytics, um zu verstehen, wie Besucher:innen die Seite finden. Du kannst zustimmen oder ablehnen, die Seite funktioniert in beiden Fällen gleich.',
         accept: 'Zustimmen', decline: 'Ablehnen', privacy: 'Datenschutz',
       },
       en: {
-        text: 'This site optionally uses Google Analytics to understand how visitors find the site. You can accept or decline — the site works the same either way.',
+        text: 'This site optionally uses Google Analytics to understand how visitors find the site. You can accept or decline, and the site works the same either way.',
         accept: 'Accept', decline: 'Decline', privacy: 'Privacy',
       },
     }[sprache];

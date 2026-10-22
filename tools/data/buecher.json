@@ -1,0 +1,572 @@
+[
+ {
+  "id": "01-tierbabys",
+  "farbe": "#EF6351",
+  "de": {
+   "titel": "Süße Tierbabys",
+   "sub": "50 zauberhafte Ausmalbilder für Kinder ab 3 Jahren",
+   "asin": "B0HFN75FX3",
+   "etsy": "4595830426"
+  },
+  "en": {
+   "titel": "Cute Baby Animals",
+   "sub": "50 Adorable Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HFN5LZQD",
+   "etsy": "4595809695"
+  }
+ },
+ {
+  "id": "02-tierfamilien",
+  "farbe": "#457B9D",
+  "de": {
+   "titel": "Tierfamilien",
+   "sub": "50 Ausmalbilder von Mama, Papa und ihren Kleinen",
+   "asin": "B0HFN67D3V",
+   "etsy": "4595826974"
+  },
+  "en": {
+   "titel": "Animal Families",
+   "sub": "50 Coloring Pages of Animal Mums, Dads and Their Little Ones",
+   "asin": "B0HFP529X1",
+   "etsy": "4595806329"
+  }
+ },
+ {
+  "id": "03-bauernhof",
+  "farbe": "#5C8B3E",
+  "de": {
+   "titel": "Mein Bauernhof-Malbuch",
+   "sub": "50 Ausmalbilder vom Bauernhof für Kinder ab 3 Jahren",
+   "asin": "B0HJCT162M",
+   "etsy": "4595810649"
+  },
+  "en": {
+   "titel": "My Farm Coloring Book",
+   "sub": "50 Farm Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HK7DRXBL",
+   "etsy": "4595833020"
+  }
+ },
+ {
+  "id": "04-safari",
+  "farbe": "#BC4B26",
+  "de": {
+   "titel": "Safari und Dschungel",
+   "sub": "50 wilde Ausmalbilder für Kinder ab 3 Jahren",
+   "asin": "B0HFN59WMB",
+   "etsy": "4595812273"
+  },
+  "en": {
+   "titel": "Safari and Jungle",
+   "sub": "50 Wild Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HFNQDSXM",
+   "etsy": "4595812931"
+  }
+ },
+ {
+  "id": "05-unterwasser",
+  "farbe": "#1D6E9E",
+  "de": {
+   "titel": "Unterwasserwelt",
+   "sub": "50 Ausmalbilder aus dem Meer für Kinder ab 3 Jahren",
+   "asin": "B0HFN5VKP6",
+   "etsy": "4595804097"
+  },
+  "en": {
+   "titel": "Under the Sea",
+   "sub": "50 Ocean Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HFP6XQ5S",
+   "etsy": "4595804725"
+  }
+ },
+ {
+  "id": "06-einhoerner",
+  "farbe": "#9B5DE5",
+  "de": {
+   "titel": "Einhörner und Zauberwesen",
+   "sub": "50 magische Ausmalbilder für Kinder ab 3 Jahren",
+   "asin": "B0HFNN7NYB",
+   "etsy": "4595813965"
+  },
+  "en": {
+   "titel": "Unicorns and Magical Creatures",
+   "sub": "50 Magical Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HFQR8YJB",
+   "etsy": "4595814949"
+  }
+ },
+ {
+  "id": "07-dinosaurier",
+  "farbe": "#2E7D5B",
+  "de": {
+   "titel": "Dinosaurier",
+   "sub": "50 urzeitliche Ausmalbilder für Kinder ab 3 Jahren",
+   "asin": "B0HGBC76T5",
+   "etsy": "4595800905"
+  },
+  "en": {
+   "titel": "Dinosaurs",
+   "sub": "50 Prehistoric Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HGBRFQDW",
+   "etsy": "4595803425"
+  }
+ },
+ {
+  "id": "08-fahrzeuge",
+  "farbe": "#D6483B",
+  "de": {
+   "titel": "Fahrzeuge",
+   "sub": "50 Ausmalbilder von Bagger, Auto und Rakete ab 3 Jahren",
+   "asin": "B0HGB662ZX",
+   "etsy": "4595828814"
+  },
+  "en": {
+   "titel": "Things That Go",
+   "sub": "50 Vehicle Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HJ64R68N",
+   "etsy": "4595808233"
+  }
+ },
+ {
+  "id": "09-haustiere",
+  "farbe": "#9C5A2E",
+  "de": {
+   "titel": "Meine Haustiere",
+   "sub": "50 Ausmalbilder von Hund, Katze & Co. ab 3 Jahren",
+   "asin": "B0HJFBV2QY",
+   "etsy": "4595837108"
+  },
+  "en": {
+   "titel": "My Pets",
+   "sub": "50 Pet Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HJFQTMZN",
+   "etsy": "4595816517"
+  }
+ },
+ {
+  "id": "10-weihnachten",
+  "farbe": "#B3202E",
+  "de": {
+   "titel": "Weihnachten mit Tieren",
+   "sub": "50 festliche Ausmalbilder für Kinder ab 3 Jahren",
+   "asin": "B0HGQXJVKR",
+   "etsy": "4595804958"
+  },
+  "en": {
+   "titel": "Christmas with Animals",
+   "sub": "50 Festive Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HGR64QBF",
+   "etsy": "4595784369"
+  }
+ },
+ {
+  "id": "21-halloween",
+  "farbe": "#E8892B",
+  "de": {
+   "titel": "Halloweenspaß",
+   "sub": "50 fröhliche Ausmalbilder für Kinder ab 3 Jahren",
+   "asin": "B0HL3DWP82",
+   "etsy": "4595776777"
+  },
+  "en": {
+   "titel": "Happy Halloween",
+   "sub": "50 Halloween Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HH9WT713",
+   "etsy": "4595801272"
+  }
+ },
+ {
+  "id": "22-thanksgiving",
+  "farbe": "#A0522D",
+  "de": {
+   "titel": "Erntedank mit Tieren",
+   "sub": "50 Ausmalbilder zum Erntedankfest für Kinder ab 3 Jahren",
+   "asin": "B0HK4PV223",
+   "etsy": "4595780813"
+  },
+  "en": {
+   "titel": "Happy Thanksgiving",
+   "sub": "50 Thanksgiving Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HGRZNQ94",
+   "etsy": "4595803084"
+  }
+ },
+ {
+  "id": "23-nikolaus",
+  "farbe": "#8B2635",
+  "de": {
+   "titel": "Nikolaus kommt",
+   "sub": "50 Ausmalbilder rund um den Nikolaustag ab 3 Jahren",
+   "asin": "B0HJFJ85F9",
+   "etsy": "4595782227"
+  },
+  "en": {
+   "titel": "Here Comes St. Nicholas",
+   "sub": "50 Christmas Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HJFJPFLW",
+   "etsy": "4595804338"
+  }
+ },
+ {
+  "id": "25-silvester",
+  "farbe": "#D4A017",
+  "de": {
+   "titel": "Silvester Feuerwerk",
+   "sub": "50 Ausmalbilder zum Jahreswechsel für Kinder ab 3 Jahren",
+   "asin": "B0HK4TF447",
+   "etsy": "4595785357"
+  },
+  "en": {
+   "titel": "New Year's Eve Sparkle",
+   "sub": "50 New Year Coloring Pages for Kids Ages 3 and Up",
+   "asin": "B0HK4Q37XY",
+   "etsy": "4595786257"
+  }
+ },
+ {
+  "id": "05-unterwasser-deluxe",
+  "farbe": "#0E6E8E",
+  "de": {
+   "titel": "Unterwasserwelt Deluxe",
+   "sub": "100 Ausmalbilder aus dem Meer für Kinder ab 3 Jahren",
+   "asin": "B0HK4M23QJ",
+   "etsy": "4595838940"
+  },
+  "en": {
+   "titel": "Under the Sea Deluxe",
+   "sub": "100 Ocean Coloring Pages for Kids Ages 3 and up",
+   "asin": "B0HK4PQG51",
+   "etsy": "4595818179"
+  }
+ },
+ {
+  "id": "11-pferde",
+  "farbe": "#8B5E3C",
+  "de": {
+   "titel": "Pferde und Ponys",
+   "sub": "50 Ausmalbilder für Kinder von 6 bis 10 Jahren",
+   "asin": "B0HKK12CJY",
+   "etsy": "4595840642"
+  },
+  "en": {
+   "titel": "Horses and Ponies",
+   "sub": "50 Coloring Pages for Kids Ages 6 to 10",
+   "asin": "B0HLLN22XT",
+   "etsy": "4595819803"
+  }
+ },
+ {
+  "id": "12-mandalas",
+  "farbe": "#7B4FA3",
+  "de": {
+   "titel": "Tier-Mandalas",
+   "sub": "50 Mandalas mit Tieren für Kinder von 6 bis 10 Jahren",
+   "asin": null,
+   "etsy": "4595842046"
+  },
+  "en": {
+   "titel": "Animal Mandalas",
+   "sub": "50 Animal Mandalas for Kids Ages 6 to 10",
+   "asin": "B0HL9R84YQ",
+   "etsy": "4595842798"
+  }
+ },
+ {
+  "id": "13-wildtiere",
+  "farbe": "#C77D1A",
+  "de": {
+   "titel": "Wilde Tiere der Welt",
+   "sub": "50 Ausmalbilder für Kinder von 6 bis 10 Jahren",
+   "asin": null,
+   "etsy": "4595822177"
+  },
+  "en": {
+   "titel": "Wild Animals of the World",
+   "sub": "50 Coloring Pages for Kids Ages 6 to 10",
+   "asin": null,
+   "etsy": "4595822911"
+  }
+ },
+ {
+  "id": "14-meer",
+  "farbe": "#1F7A8C",
+  "de": {
+   "titel": "Unterwasserwelt",
+   "sub": "50 Ausmalbilder für Kinder von 6 bis 10 Jahren",
+   "asin": null,
+   "etsy": "4595823707"
+  },
+  "en": {
+   "titel": "Under the Sea",
+   "sub": "50 Coloring Pages for Kids Ages 6 to 10",
+   "asin": null,
+   "etsy": "4595846436"
+  }
+ },
+ {
+  "id": "15-dinosaurier",
+  "farbe": "#3D8B37",
+  "de": {
+   "titel": "Dinosaurier",
+   "sub": "50 Ausmalbilder für Kinder von 6 bis 10 Jahren",
+   "asin": "B0HKJW9PSR",
+   "etsy": "4595847152"
+  },
+  "en": {
+   "titel": "Dinosaurs",
+   "sub": "50 Coloring Pages for Kids Ages 6 to 10",
+   "asin": "B0HKJVMMVR",
+   "etsy": "4595826327"
+  }
+ },
+ {
+  "id": "16-weltraum",
+  "farbe": "#3B4CCA",
+  "de": {
+   "titel": "Weltraum und Planeten",
+   "sub": "50 Ausmalbilder für Kinder von 6 bis 10 Jahren",
+   "asin": "B0HKJXH29Q",
+   "etsy": "4595848988"
+  },
+  "en": {
+   "titel": "Space and Planets",
+   "sub": "50 Coloring Pages for Kids Ages 6 to 10",
+   "asin": "B0HKJRH6PN",
+   "etsy": "4595849746"
+  }
+ },
+ {
+  "id": "17-drachen",
+  "farbe": "#B5382F",
+  "de": {
+   "titel": "Drachen und Fabelwesen",
+   "sub": "50 Ausmalbilder für Kinder von 6 bis 10 Jahren",
+   "asin": "B0HKJXDGRK",
+   "etsy": "4595828877"
+  },
+  "en": {
+   "titel": "Dragons and Mythical Creatures",
+   "sub": "50 Coloring Pages for Kids Ages 6 to 10",
+   "asin": "B0HKJTQFM7",
+   "etsy": "4595829797"
+  }
+ },
+ {
+  "id": "18-maschinen",
+  "farbe": "#4A5568",
+  "de": {
+   "titel": "Autos und Maschinen",
+   "sub": "50 Ausmalbilder für Kinder von 6 bis 10 Jahren",
+   "asin": null,
+   "etsy": "4595852140"
+  },
+  "en": {
+   "titel": "Cars and Machines",
+   "sub": "50 Coloring Pages for Kids Ages 6 to 10",
+   "asin": null,
+   "etsy": "4595831287"
+  }
+ },
+ {
+  "id": "19-voegel",
+  "farbe": "#2A9D8F",
+  "de": {
+   "titel": "Vögel der Welt",
+   "sub": "50 Ausmalbilder für Kinder von 6 bis 10 Jahren",
+   "asin": null,
+   "etsy": "4595832163"
+  },
+  "en": {
+   "titel": "Birds of the World",
+   "sub": "50 Coloring Pages for Kids Ages 6 to 10",
+   "asin": null,
+   "etsy": "4595832969"
+  }
+ },
+ {
+  "id": "20-ritter",
+  "farbe": "#6B5B95",
+  "de": {
+   "titel": "Ritter und Burgen",
+   "sub": "50 Ausmalbilder für Kinder von 6 bis 10 Jahren",
+   "asin": null,
+   "etsy": "4595855480"
+  },
+  "en": {
+   "titel": "Knights and Castles",
+   "sub": "50 Coloring Pages for Kids Ages 6 to 10",
+   "asin": null,
+   "etsy": "4595835097"
+  }
+ },
+ {
+  "id": "30-labyrinth-dschungel",
+  "farbe": "#3E8E5A",
+  "typ": "labyrinth",
+  "de": {
+   "titel": "Dschungel Labyrinthe",
+   "sub": "Labyrinthe im Dschungel für Kinder ab 4 Jahren",
+   "asin": null,
+   "etsy": "4595857590"
+  },
+  "en": {
+   "titel": "Jungle Mazes",
+   "sub": "Jungle Mazes for Kids Ages 4 to 8",
+   "asin": null,
+   "etsy": "4595858334"
+  }
+ },
+ {
+  "id": "31-labyrinth-dino",
+  "farbe": "#BC4B26",
+  "typ": "labyrinth",
+  "de": {
+   "titel": "Dinosaurier Labyrinthe",
+   "sub": "Labyrinthe mit Dinosauriern für Kinder ab 4 Jahren",
+   "asin": null,
+   "etsy": "4595837447"
+  },
+  "en": {
+   "titel": "Dinosaur Mazes",
+   "sub": "Dinosaur Mazes for Kids Ages 4 to 8",
+   "asin": null,
+   "etsy": "4595860024"
+  }
+ },
+ {
+  "id": "32-labyrinth-weltraum",
+  "farbe": "#3B5BA5",
+  "typ": "labyrinth",
+  "de": {
+   "titel": "Weltraum Labyrinthe",
+   "sub": "Labyrinthe im Weltraum für Kinder ab 4 Jahren",
+   "asin": null,
+   "etsy": "4595839143"
+  },
+  "en": {
+   "titel": "Space Mazes",
+   "sub": "Space Mazes for Kids Ages 4 to 8",
+   "asin": null,
+   "etsy": "4595861538"
+  }
+ },
+ {
+  "id": "33-labyrinth-meer",
+  "farbe": "#1F7A8C",
+  "typ": "labyrinth",
+  "de": {
+   "titel": "Meer Labyrinthe",
+   "sub": "Labyrinthe unter Wasser für Kinder ab 4 Jahren",
+   "asin": null,
+   "etsy": "4595840749"
+  },
+  "en": {
+   "titel": "Ocean Mazes",
+   "sub": "Ocean Mazes for Kids Ages 4 to 8",
+   "asin": null,
+   "etsy": "4595841557"
+  }
+ },
+ {
+  "id": "34-labyrinth-einhorn",
+  "farbe": "#A8478F",
+  "typ": "labyrinth",
+  "de": {
+   "titel": "Einhorn Labyrinthe",
+   "sub": "Labyrinthe mit Einhörnern für Kinder ab 4 Jahren",
+   "asin": null,
+   "etsy": "4595863968"
+  },
+  "en": {
+   "titel": "Unicorn Mazes",
+   "sub": "Unicorn Mazes for Kids Ages 4 to 8",
+   "asin": null,
+   "etsy": "4595843171"
+  }
+ },
+ {
+  "id": "40-wortsuche-dschungel",
+  "farbe": "#3E8E5A",
+  "typ": "wortsuche",
+  "de": {
+   "titel": "Dschungel Wortsuche",
+   "sub": "Wortsuchrätsel für Kinder ab 6 Jahren",
+   "asin": null,
+   "etsy": "4595843969"
+  },
+  "en": {
+   "titel": "Jungle Word Search",
+   "sub": "Word Search Puzzles for Kids Ages 6 to 10",
+   "asin": null,
+   "etsy": "4595867184"
+  }
+ },
+ {
+  "id": "41-wortsuche-dino",
+  "farbe": "#BC4B26",
+  "typ": "wortsuche",
+  "de": {
+   "titel": "Dinosaurier Wortsuche",
+   "sub": "80 Wortsuchrätsel in 3 Stufen für Kinder ab 6 Jahren",
+   "asin": "B0HMRJ8XZP",
+   "etsy": "4595868152"
+  },
+  "en": {
+   "titel": "Dinosaur Word Search",
+   "sub": "80 Word Search Puzzles in 3 Levels for Kids Ages 6 to 10",
+   "asin": "B0HMRS21D2",
+   "etsy": "4595847371"
+  }
+ },
+ {
+  "id": "42-wortsuche-weltraum",
+  "farbe": "#3B5BA5",
+  "typ": "wortsuche",
+  "de": {
+   "titel": "Weltraum Wortsuche",
+   "sub": "Wortsuchrätsel für Kinder ab 6 Jahren",
+   "asin": null,
+   "etsy": "4595848223"
+  },
+  "en": {
+   "titel": "Space Word Search",
+   "sub": "Word Search Puzzles for Kids Ages 6 to 10",
+   "asin": null,
+   "etsy": "4595849109"
+  }
+ },
+ {
+  "id": "43-wortsuche-meer",
+  "farbe": "#1F7A8C",
+  "typ": "wortsuche",
+  "de": {
+   "titel": "Meer Wortsuche",
+   "sub": "Wortsuchrätsel für Kinder ab 6 Jahren",
+   "asin": null,
+   "etsy": "4595850021"
+  },
+  "en": {
+   "titel": "Ocean Word Search",
+   "sub": "Word Search Puzzles for Kids Ages 6 to 10",
+   "asin": null,
+   "etsy": "4595850927"
+  }
+ },
+ {
+  "id": "44-wortsuche-weihnachten",
+  "farbe": "#B23A48",
+  "typ": "wortsuche",
+  "de": {
+   "titel": "Weihnachtsrätsel Wortsuche",
+   "sub": "80 Wortsuchrätsel zu Weihnachten für Kinder ab 6 Jahren",
+   "asin": "B0HLY43KDL",
+   "etsy": "4595787167"
+  },
+  "en": {
+   "titel": "Christmas Word Search",
+   "sub": "80 Holiday Word Search Puzzles for Kids Ages 6 to 10",
+   "asin": "B0HLYCR2JJ",
+   "etsy": "4595809816"
+  }
+ }
+]
