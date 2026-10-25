@@ -453,8 +453,22 @@ def products_ld(ids, lang):
             "image": SITE + f"/pakete/{i}_{lang}.jpg",
             "brand": {"@type": "Brand", "name": AUTHOR},
             "offers": {"@type": "Offer", "url": etsy_url(lid), "priceCurrency": "EUR",
-                       "price": f"{p['preis']:.2f}", "availability": "https://schema.org/InStock"}})
+                       "price": f"{p['preis']:.2f}", "availability": "https://schema.org/InStock",
+                       # Digitale Ware bei Etsy: Sofort-Download, keine Rückgabe (Etsy-AGB "Digitale Artikel", 84 aktive Angebote)
+                       "shippingDetails": {
+                           "@type": "OfferShippingDetails",
+                           "shippingRate": {"@type": "MonetaryAmount", "value": "0", "currency": "EUR"},
+                           "shippingDestination": [{"@type": "DefinedRegion", "addressCountry": c} for c in DIGITAL_LAENDER],
+                           "deliveryTime": {"@type": "ShippingDeliveryTime",
+                                            "handlingTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"},
+                                            "transitTime": {"@type": "QuantitativeValue", "minValue": 0, "maxValue": 0, "unitCode": "DAY"}}},
+                       "hasMerchantReturnPolicy": {
+                           "@type": "MerchantReturnPolicy", "applicableCountry": DIGITAL_LAENDER,
+                           "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"}}})
     return out
+
+
+DIGITAL_LAENDER = ["DE", "AT", "CH", "GB", "US"]
 
 
 def site_entities(lang):
