@@ -483,7 +483,7 @@ PAGES["dinosaurier"] = {
         "desc": "Ausmalbilder Dinosaurier für Kinder: Malbücher ab drei und ab sechs Jahren, Labyrinthe und Wortsuche. Taschenbuch bei Amazon oder PDF bei Etsy.",
         "h1": "Ausmalbilder Dinosaurier für Kinder",
         "eyebrow": "Dinosaurier",
-        "lead": "Dinosaurier gibt es in der Reihe gleich viermal: als Malbuch für kleine Kinder, als Malbuch für Kinder ab sechs, als Labyrinthbuch und als Wortsuche. Alle vier gibt es als PDF bei Etsy, drei davon auch als Taschenbuch bei Amazon.",
+        "lead": "Dinosaurier gibt es in der Reihe gleich viermal: als Malbuch für kleine Kinder, als Malbuch für Kinder ab sechs, als Labyrinthbuch und als Wortsuche. Alle vier gibt es als PDF bei Etsy und als Taschenbuch bei Amazon.",
         "sections": [
             ("Dinosaurier für zwei Altersstufen", [
                 "Das Malbuch „Dinosaurier“ für Kinder ab drei Jahren hat 50 Ausmalbilder mit dicken Linien und großen Motiven. Jedes Bild steht allein auf einer Seite.",
@@ -520,7 +520,7 @@ PAGES["dinosaurier"] = {
         "desc": "Dinosaur coloring pages for kids: coloring books for ages three and six, mazes and word search. Paperback on Amazon or printable PDF on Etsy.",
         "h1": "Dinosaur coloring pages for kids",
         "eyebrow": "Dinosaurs",
-        "lead": "The series has dinosaurs four times: as a coloring book for little kids, as a coloring book for kids ages six and up, as a maze book and as a word search. All four are available as PDFs on Etsy, and three of them also as paperbacks on Amazon.",
+        "lead": "The series has dinosaurs four times: as a coloring book for little kids, as a coloring book for kids ages six and up, as a maze book and as a word search. All four are available as PDFs on Etsy and as paperbacks on Amazon.",
         "sections": [
             ("Dinosaurs for two age groups", [
                 "The coloring book “Dinosaurs” for kids ages three and up has 50 coloring pages with thick lines and big motifs. Each picture sits alone on its page.",
@@ -760,10 +760,10 @@ PAGES["labyrinthe"] = {
     "related": ["woerter", "dinosaurier", "ausdrucken", "faq"],
     "de": {
         "title": "Labyrinthe für Kinder zum Ausdrucken | M. von Wedelstaedt",
-        "desc": "Labyrinthe für Kinder ab vier Jahren: 60 Labyrinthe pro Buch, fünf Themen, als PDF zum Ausdrucken bei Etsy in A4 und US Letter.",
+        "desc": "Labyrinthe für Kinder ab vier Jahren: 60 Labyrinthe pro Buch, fünf Themen, als PDF bei Etsy, das Dinosaurier-Buch auch bei Amazon.",
         "h1": "Labyrinthe für Kinder",
         "eyebrow": "Rätselbücher",
-        "lead": "Jedes Labyrinthbuch der Reihe enthält 60 Labyrinthe und ist für Kinder ab vier Jahren gedacht. Du bekommst die Bücher als PDF zum Ausdrucken bei Etsy.",
+        "lead": "Jedes Labyrinthbuch der Reihe enthält 60 Labyrinthe und ist für Kinder ab vier Jahren gedacht. Du bekommst die Bücher als PDF zum Ausdrucken bei Etsy, das Dinosaurier-Labyrinthbuch auch als Taschenbuch bei Amazon.",
         "sections": [
             ("Fünf Themen, je 60 Labyrinthe", [
                 "Es gibt Labyrinthbücher zu fünf Themen: Dschungel, Dinosaurier, Weltraum, Meer und Einhorn. Jedes Buch hat 60 Labyrinthe.",
@@ -793,17 +793,17 @@ PAGES["labyrinthe"] = {
             ("Wie viele Labyrinthe sind in einem Buch?",
              "Jedes Labyrinthbuch hat 60 Labyrinthe zu einem Thema."),
             ("Gibt es die Labyrinthe auch als Taschenbuch?",
-             "Aktuell gibt es die Labyrinthbücher als PDF bei Etsy."),
+             "Das Dinosaurier-Labyrinthbuch gibt es als Taschenbuch bei Amazon. Die anderen vier Labyrinthbücher gibt es bisher als PDF bei Etsy."),
             ("Darf ich die Labyrinthe in der Schule ausdrucken?",
              "Ja, für den privaten Gebrauch und in der Schule. Weitergeben oder verkaufen darfst du die Dateien nicht."),
         ],
     },
     "en": {
         "title": "Mazes for Kids to Print | M. von Wedelstaedt",
-        "desc": "Mazes for kids ages four and up: 60 mazes per book, five topics, as printable PDF on Etsy in A4 and US Letter.",
+        "desc": "Mazes for kids ages four and up: 60 mazes per book, five topics, as printable PDF on Etsy, the dinosaur book also on Amazon.",
         "h1": "Mazes for kids",
         "eyebrow": "Puzzle books",
-        "lead": "Each maze book in the series has 60 mazes and is made for kids ages four and up. You get the books as printable PDFs on Etsy.",
+        "lead": "Each maze book in the series has 60 mazes and is made for kids ages four and up. You get the books as printable PDFs on Etsy, and the dinosaur maze book also as a paperback on Amazon.",
         "sections": [
             ("Five topics, 60 mazes each", [
                 "There are maze books on five topics: Jungle, Dinosaur, Space, Ocean and Unicorn. Each book has 60 mazes.",
@@ -833,7 +833,7 @@ PAGES["labyrinthe"] = {
             ("How many mazes are in a book?",
              "Each maze book has 60 mazes on one topic."),
             ("Are the mazes also available as a paperback?",
-             "Right now the maze books are available as PDFs on Etsy."),
+             "The dinosaur maze book is available as a paperback on Amazon. The other four maze books are available as PDFs on Etsy for now."),
             ("May I print the mazes at school?",
              "Yes, for private use and at school. You may not pass the files on or sell them."),
         ],
