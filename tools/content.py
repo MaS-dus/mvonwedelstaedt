@@ -17,6 +17,7 @@ SLUGS = {
     "weihnachten": {"de": "ausmalbilder-weihnachten", "en": "en/christmas-coloring-pages"},
     "nikolaus": {"de": "ausmalbilder-nikolaus", "en": "en/st-nicholas-coloring-pages"},
     "silvester": {"de": "ausmalbilder-silvester", "en": "en/new-year-coloring-pages"},
+    "advent": {"de": "adventskalender-zum-ausmalen", "en": "en/advent-calendar-coloring"},
     "dinosaurier": {"de": "ausmalbilder-dinosaurier", "en": "en/dinosaur-coloring-pages"},
     "ausdrucken": {"de": "ausmalbilder-zum-ausdrucken", "en": "en/printable-coloring-pages"},
     "woerter": {"de": "woerter-suchen-kinder", "en": "en/word-search-for-kids"},
@@ -26,7 +27,7 @@ SLUGS = {
 }
 
 # Reihenfolge der Themenseiten (Footer, Themenkarten)
-PAGE_ORDER = ["weihnachten", "nikolaus", "silvester", "dinosaurier", "ausdrucken",
+PAGE_ORDER = ["weihnachten", "advent", "nikolaus", "silvester", "dinosaurier", "ausdrucken",
               "woerter", "labyrinthe", "pakete", "faq"]
 
 # ---------------------------------------------------------------------------
@@ -109,6 +110,7 @@ UI = {
 
 NAV_LABEL = {
     "weihnachten": {"de": "Ausmalbilder Weihnachten", "en": "Christmas coloring pages"},
+    "advent": {"de": "Adventskalender zum Ausmalen", "en": "Advent calendar coloring pages"},
     "nikolaus": {"de": "Ausmalbilder Nikolaus", "en": "St. Nicholas coloring pages"},
     "silvester": {"de": "Ausmalbilder Silvester", "en": "New Year coloring pages"},
     "dinosaurier": {"de": "Ausmalbilder Dinosaurier", "en": "Dinosaur coloring pages"},
@@ -122,6 +124,8 @@ NAV_LABEL = {
 TOPIC_BLURB = {
     "weihnachten": {"de": "Malbuch mit Tieren, Nikolaus und Wortsuche zu Weihnachten",
                     "en": "A coloring book with animals, St. Nicholas and a Christmas word search"},
+    "advent": {"de": "24 Bilder, 24 Tage: Ausmalbuch als Adventskalender",
+               "en": "24 pictures, 24 days: a coloring book as advent calendar"},
     "nikolaus": {"de": "50 Ausmalbilder rund um den Nikolaustag",
                  "en": "50 coloring pages around St. Nicholas Day"},
     "silvester": {"de": "50 Ausmalbilder zum Jahreswechsel",
@@ -229,7 +233,7 @@ PAGES["weihnachten"] = {
     "video": True,
     "books": ["10-weihnachten", "23-nikolaus", "44-wortsuche-weihnachten"],
     "bundles": ["jahreszeiten", "alles"],
-    "related": ["nikolaus", "silvester", "ausdrucken", "pakete"],
+    "related": ["advent", "nikolaus", "silvester", "ausdrucken", "pakete"],
     "de": {
         "title": "Ausmalbilder Weihnachten zum Ausdrucken | M. von Wedelstaedt",
         "desc": "Ausmalbilder zu Weihnachten für Kinder: Malbuch mit Tieren, Nikolaus und Wortsuche. Als Taschenbuch bei Amazon oder als PDF zum Ausdrucken bei Etsy.",
@@ -304,12 +308,90 @@ PAGES["weihnachten"] = {
     },
 }
 
+# ---- Adventskalender ------------------------------------------------------
+PAGES["advent"] = {
+    "og": "jahreszeiten",
+    "books": ["10-weihnachten", "44-wortsuche-weihnachten", "23-nikolaus"],
+    "bundles": ["jahreszeiten", "alles"],
+    "related": ["weihnachten", "nikolaus", "ausdrucken", "pakete"],
+    "de": {
+        "title": "Adventskalender zum Ausmalen: 24 Bilder | M. von Wedelstaedt",
+        "desc": "Adventskalender zum Ausmalen selbst machen: 24 Weihnachtsbilder aus dem Malbuch, eins pro Tag. Als PDF zum Ausdrucken bei Etsy oder Taschenbuch bei Amazon.",
+        "h1": "Adventskalender zum Ausmalen",
+        "eyebrow": "Advent",
+        "lead": "Aus einem Malbuch wird mit wenig Aufwand ein Adventskalender: 24 Bilder, ein Bild pro Tag vom 1. bis zum 24. Dezember. Du bekommst die Bilder als PDF zum Ausdrucken bei Etsy oder als Taschenbuch bei Amazon.",
+        "sections": [
+            ("So wird das Malbuch zum Adventskalender", [
+                "„Weihnachten mit Tieren“ hat 50 Ausmalbilder mit festlichen Motiven. Such dir 24 davon aus, nummeriere sie von 1 bis 24 und lege jeden Tag ein Bild bereit.",
+                "Wer das PDF hat, druckt die 24 Seiten aus und steckt sie in Umschläge oder kleine Tüten. Beim Taschenbuch klebst du für jeden Tag einen Zettel mit der Zahl auf die Seite.",
+                "Die übrigen Bilder reichen für die Weihnachtstage selbst, für Geschwister oder für die Oma.",
+            ]),
+            ("Für größere Kinder: Rätsel statt Bilder", [
+                "Die „Weihnachtsrätsel Wortsuche“ hat 80 Rätsel in drei Stufen, für Kinder ab sechs Jahren. Mit 24 davon wird der Kalender zum Rätselkalender, und die Lösungen stehen hinten im Buch.",
+                "Du kannst Bilder und Rätsel mischen: an geraden Tagen ein Rätsel, an ungeraden ein Ausmalbild.",
+            ]),
+            ("Rechtzeitig zum 1. Dezember", [
+                "Das PDF bekommst du sofort nach dem Kauf, ohne Versand. Du druckst die Seiten in A4 oder US Letter aus, so oft du möchtest, für den privaten Gebrauch und die Schule.",
+                "Das Jahreszeiten-Paket enthält fünf Malbücher mit 250 Seiten, darunter Weihnachten und Nikolaus. Es kostet 12,99 €. Weitere Ideen findest du auf der Seite [Ausmalbilder Weihnachten](@weihnachten).",
+            ]),
+        ],
+        "books_h2": "Bücher für deinen Adventskalender",
+        "bundles_h2": "Pakete mit Weihnachtsbüchern",
+        "faq_h2": "Fragen zum Adventskalender zum Ausmalen",
+        "faq": [
+            ("Ist das ein fertiger Adventskalender?",
+             "Nein. Du suchst 24 Seiten aus dem Malbuch aus und verpackst sie selbst, zum Beispiel in Umschlägen. Die Bilder und Rätsel dafür stecken in den Büchern."),
+            ("Welches Buch passt für einen Adventskalender?",
+             "Für Kinder ab drei Jahren „Weihnachten mit Tieren“ mit 50 Bildern. Für Kinder ab sechs Jahren die „Weihnachtsrätsel Wortsuche“ mit 80 Rätseln."),
+            ("Kann ich die Seiten mehrmals ausdrucken?",
+             "Ja, beim PDF so oft du möchtest, für den privaten Gebrauch und die Schule. Weitergeben oder verkaufen darfst du die Dateien nicht."),
+            ("Bis wann muss ich bestellen?",
+             "Das PDF lädst du direkt nach dem Kauf herunter. Das Taschenbuch kommt per Versand, bestelle es also einige Tage vor dem 1. Dezember."),
+        ],
+    },
+    "en": {
+        "title": "Advent Calendar Coloring Pages | M. von Wedelstaedt",
+        "desc": "Make an advent calendar to color: 24 Christmas pictures from the coloring book, one per day. Printable PDF on Etsy or paperback on Amazon.",
+        "h1": "Advent calendar to color",
+        "eyebrow": "Advent",
+        "lead": "A coloring book turns into an advent calendar with little effort: 24 pictures, one per day from December 1 to 24. You get the pictures as a printable PDF on Etsy or as a paperback on Amazon.",
+        "sections": [
+            ("How the coloring book becomes an advent calendar", [
+                "“Christmas with Animals” has 50 festive coloring pages. Pick 24 of them, number them from 1 to 24 and put one picture out each day.",
+                "With the PDF you print the 24 pages and put them in envelopes or small bags. With the paperback you stick a note with the number on each page.",
+                "The remaining pictures are enough for the Christmas days themselves, for siblings or for grandma.",
+            ]),
+            ("For older kids: puzzles instead of pictures", [
+                "“Christmas Word Search” has 80 puzzles in three levels, for kids ages six and up. With 24 of them the calendar becomes a puzzle calendar, and the solutions are at the back of the book.",
+                "You can mix pictures and puzzles: a puzzle on even days, a coloring page on odd days.",
+            ]),
+            ("In time for December 1", [
+                "You get the PDF right after the purchase, with no shipping. You print the pages in A4 or US Letter as often as you like, for private use and school.",
+                "The seasonal bundle has five coloring books with 250 pages, including Christmas and St. Nicholas. It costs €12.99. You can find more ideas on the page [Christmas coloring pages](@weihnachten).",
+            ]),
+        ],
+        "books_h2": "Books for your advent calendar",
+        "bundles_h2": "Bundles with Christmas books",
+        "faq_h2": "Questions about the advent calendar to color",
+        "faq": [
+            ("Is this a ready-made advent calendar?",
+             "No. You pick 24 pages from the coloring book and pack them yourself, for example in envelopes. The pictures and puzzles for it are inside the books."),
+            ("Which book fits an advent calendar?",
+             "For kids ages three and up, “Christmas with Animals” with 50 pictures. For kids ages six and up, “Christmas Word Search” with 80 puzzles."),
+            ("Can I print the pages more than once?",
+             "Yes, with the PDF as often as you like, for private use and school. You may not pass the files on or sell them."),
+            ("When do I have to order?",
+             "You download the PDF right after the purchase. The paperback is shipped, so order it a few days before December 1."),
+        ],
+    },
+}
+
 # ---- Nikolaus -------------------------------------------------------------
 PAGES["nikolaus"] = {
     "og": "jahreszeiten",
     "books": ["23-nikolaus", "10-weihnachten", "44-wortsuche-weihnachten", "25-silvester"],
     "bundles": ["jahreszeiten"],
-    "related": ["weihnachten", "silvester", "ausdrucken", "faq"],
+    "related": ["weihnachten", "advent", "silvester", "ausdrucken", "faq"],
     "de": {
         "title": "Ausmalbilder Nikolaus zum Ausdrucken | M. von Wedelstaedt",
         "desc": "Ausmalbilder zum Nikolaustag für Kinder ab drei Jahren: Malbuch mit 50 Bildern als Taschenbuch bei Amazon oder als PDF zum Ausdrucken bei Etsy.",

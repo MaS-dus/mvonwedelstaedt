@@ -258,7 +258,7 @@ def footer_html(lang):
     def li(key):
         return f'<li><a href="{path_of(key, lang)}">{esc(NAV_LABEL[key][lang])}</a></li>'
 
-    themes = "".join(li(k) for k in ("weihnachten", "nikolaus", "silvester", "dinosaurier"))
+    themes = "".join(li(k) for k in ("weihnachten", "advent", "nikolaus", "silvester", "dinosaurier"))
     printing = "".join(li(k) for k in ("ausdrucken", "woerter", "labyrinthe", "pakete"))
     info = (f'<li><a href="{home}">{esc(ui["home_label"])}</a></li>' + li("faq") +
             f'<li><a href="/impressum">{esc(ui["impressum"])}</a></li>'
