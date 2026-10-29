@@ -380,8 +380,18 @@ def bundle_card(p, lang):
     )
 
 
+SHOP_COUPON_URL = "https://mvonwedelstaedt.etsy.com?coupon=WELCOME20"
+
+
+def promo_note(lang):
+    ui = UI[lang]
+    return (f'<p class="promo-note">{esc(ui["promo_text"])} <strong>{esc(ui["promo_code"])}</strong>. '
+            f'<a href="{SHOP_COUPON_URL}" target="_blank" rel="noopener">{esc(ui["promo_link"])}</a></p>')
+
+
 def bundle_grid(ids, lang):
-    return '<div class="bundle-grid">\n' + "\n".join(bundle_card(PAKET_NACH_ID[i], lang) for i in ids) + "\n</div>"
+    return (promo_note(lang) + '\n<div class="bundle-grid">\n'
+            + "\n".join(bundle_card(PAKET_NACH_ID[i], lang) for i in ids) + "\n</div>")
 
 
 def xmas_block(lang):
@@ -397,6 +407,7 @@ def xmas_block(lang):
         f'    <h3>{esc(ui["xmas_h3"])}</h3>\n'
         f'    <p>{esc(ui["xmas_p"])}</p>\n'
         f'    <a class="bundle-btn" href="{etsy_url(p["etsy"][lang][0][1])}" target="_blank" rel="noopener">{esc(ui["xmas_btn"])}</a>\n'
+        f'    {promo_note(lang)}\n'
         "  </div>\n"
         "</div>"
     )

@@ -69,6 +69,9 @@ UI = {
         "xmas_p": "Fünf Bücher von Halloween über Nikolaus und Weihnachten bis Silvester, als PDF in A4 und US Letter. Passend für den Advent und für Regentage.",
         "xmas_btn": "Jahreszeiten-Paket auf Etsy",
         "xmas_video_label": "Video zum Jahreszeiten-Paket",
+        "promo_text": "Bis 31. Dezember 2026: 20 % Rabatt auf alles im Etsy-Shop mit dem Code",
+        "promo_code": "WELCOME20",
+        "promo_link": "Shop mit Rabatt öffnen",
     },
     "en": {
         "lang": "en",
@@ -105,6 +108,9 @@ UI = {
         "xmas_p": "Five books from Halloween through St. Nicholas and Christmas to New Year, as PDF in A4 and US Letter. Made for advent and rainy days.",
         "xmas_btn": "Seasonal bundle on Etsy",
         "xmas_video_label": "Video about the seasonal bundle",
+        "promo_text": "Until December 31, 2026: 20% off everything in the Etsy shop with the code",
+        "promo_code": "WELCOME20",
+        "promo_link": "Open the shop with the discount",
     },
 }
 
